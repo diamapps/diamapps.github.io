@@ -26,6 +26,31 @@
   --card-kante: rgba(255, 255, 255, 0.07);
   --schatten: 0 22px 50px rgba(0, 0, 0, 0.6);
   --radius: 26px;
+
+  /* ---- Schrift-Skala ----
+     Sieben Stufen, mehr braucht die Seite nicht. Vorher lagen allein auf
+     der Ebene h3 vier verschiedene Groessen (1,55/1,45/1,30/1,08rem) und
+     im Fliesstext fuenf (1,00-0,90rem) – das wirkte unabsichtlich. */
+  --t-mikro: 0.8125rem;   /* 13px – Chips, Abzeichen, Fussnoten */
+  --t-klein: 0.9375rem;   /* 15px – Navigation, Kartentext, Tabellen */
+  --t-body:  1rem;        /* 16px – Fliesstext */
+  --t-lead:  1.125rem;    /* 18px – Vorspann, Anspruch, Einleitung */
+  --t-h4:    1.0625rem;   /* 17px – Kartenueberschrift */
+  --t-h3:    1.375rem;    /* 22px – Abschnittsueberschrift zweiter Ebene */
+  --t-h2:    2rem;        /* 32px – Abschnittsueberschrift */
+
+  /* ---- Zeilenhoehen: je groesser die Schrift, desto enger ---- */
+  --z-display: 1.06;
+  --z-h2: 1.18;
+  --z-h3: 1.28;
+  --z-h4: 1.38;
+  --z-text: 1.65;
+
+  /* ---- Senkrechter Rhythmus, durchgehend Vielfache von 4 ---- */
+  --a-etikett: 10px;   /* Etikett -> Ueberschrift */
+  --a-titel: 12px;     /* Ueberschrift -> Text */
+  --a-absatz: 12px;    /* Absatz -> Absatz */
+  --a-block: 48px;     /* Abschnittsteil -> naechster */
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -33,7 +58,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.6;
+  line-height: var(--z-text);
   -webkit-font-smoothing: antialiased;
 }
 ::selection { background: rgba(180, 214, 236, 0.28); color: #fff; }
@@ -79,10 +104,12 @@ header {
 }
 .nav img { width: 34px; height: 34px; }
 .nav a.brandlink { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; }
+/* Die Wortmarke traegt bewusst eine eigene Groesse: sie ist Markenzeichen,
+   kein Text – deshalb steht sie ausserhalb der Skala. */
 .nav .brand { font-size: 1.18rem; font-weight: 700; letter-spacing: -0.02em; }
 .nav .brand span { color: var(--diamant); }
 .nav nav { margin-left: auto; display: flex; align-items: center; gap: 22px; }
-.nav nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.nav nav a { color: var(--ink-soft); text-decoration: none; font-size: var(--t-klein); font-weight: 500; }
 .nav nav a:hover, .nav nav a:focus-visible { color: var(--diamant-hell); }
 .nav nav a[aria-current="page"], .nav nav a.navaktiv { color: var(--diamant); font-weight: 600; }
 .langswitch {
@@ -91,7 +118,7 @@ header {
   padding: 3px 4px; background: var(--flaeche);
 }
 .langswitch a {
-  font-size: 0.8rem; font-weight: 600; text-decoration: none;
+  font-size: var(--t-mikro); font-weight: 600; text-decoration: none;
   color: var(--ink-soft); padding: 3px 9px; border-radius: 999px; line-height: 1.4;
 }
 .langswitch a[aria-current="true"] {
@@ -100,7 +127,7 @@ header {
 @media (max-width: 720px) {
   .nav { padding: 12px 16px; gap: 9px; flex-wrap: wrap; }
   .nav nav { gap: 14px; width: 100%; margin-left: 0; padding-top: 4px; overflow-x: auto; }
-  .nav nav a { font-size: 0.88rem; white-space: nowrap; }
+  .nav nav a { font-size: var(--t-mikro); white-space: nowrap; }
   .nav .brand { font-size: 1.06rem; }
 }
 
@@ -121,13 +148,14 @@ header {
   background-size: 160% 100%;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
+  line-height: var(--z-display);
 }
-.hero p.tag { max-width: 560px; margin: 22px auto 0; font-size: 1.2rem; color: var(--ink-soft); }
+.hero p.tag { max-width: 560px; margin: 22px auto 0; font-size: var(--t-lead); color: var(--ink-soft); }
 .hero .cta {
   display: inline-block; margin-top: 34px;
   padding: 14px 34px; border-radius: 999px;
   background: linear-gradient(135deg, var(--diamant-hell), var(--diamant));
-  color: #08131A; text-decoration: none; font-weight: 700; font-size: 1.02rem;
+  color: #08131A; text-decoration: none; font-weight: 700; font-size: var(--t-body);
   box-shadow: 0 14px 34px rgba(180, 214, 236, 0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -135,9 +163,13 @@ header {
 
 /* ---------- Abschnitte ---------- */
 section { max-width: 1060px; margin: 0 auto; padding: 56px 24px; }
-.kicker { color: var(--diamant); font-weight: 700; font-size: 0.88rem; letter-spacing: 0.16em; text-transform: uppercase; }
-h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
-.lead { color: var(--ink-soft); max-width: 640px; margin-top: 10px; }
+.kicker { color: var(--diamant); font-weight: 700; font-size: var(--t-mikro); letter-spacing: 0.16em; text-transform: uppercase; }
+h2 { font-size: var(--t-h2); letter-spacing: -0.025em; margin-top: var(--a-etikett);
+  line-height: var(--z-h2);
+}
+.lead { color: var(--ink-soft); max-width: 640px; margin-top: var(--a-titel);
+  font-size: var(--t-lead);
+}
 
 /* ---------- App-Karten ---------- */
 .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-top: 36px; }
@@ -160,14 +192,16 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   border: 0.5px solid rgba(255, 255, 255, 0.10);
 }
-.app-card h3 { font-size: 1.45rem; margin-top: 20px; letter-spacing: -0.02em; }
-.app-card .sub { color: var(--diamant); font-weight: 600; font-size: 0.98rem; margin-top: 2px; }
-.app-card p.desc { color: var(--ink-soft); margin-top: 12px; font-size: 1rem; }
-.app-card .more { margin-top: 18px; align-self: flex-start; text-decoration: none; color: var(--diamant); font-weight: 600; font-size: 0.98rem; }
+.app-card h3 { font-size: var(--t-h3); margin-top: 20px; letter-spacing: -0.02em;
+  line-height: var(--z-h3);
+}
+.app-card .sub { color: var(--diamant); font-weight: 600; font-size: var(--t-klein); margin-top: 6px; }
+.app-card p.desc { color: var(--ink-soft); margin-top: var(--a-titel); font-size: var(--t-body); }
+.app-card .more { margin-top: 18px; align-self: flex-start; text-decoration: none; color: var(--diamant); font-weight: 600; font-size: var(--t-klein); }
 .app-card .more:hover { color: var(--diamant-hell); text-decoration: underline; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .chip {
-  font-size: 0.82rem; font-weight: 600; color: var(--ink-soft);
+  font-size: var(--t-mikro); font-weight: 600; color: var(--ink-soft);
   background: var(--flaeche);
   border: 1px solid var(--card-kante);
   padding: 5px 12px; border-radius: 999px;
@@ -175,7 +209,7 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 .chip.status { color: var(--diamant); background: rgba(180, 214, 236, 0.10); border-color: rgba(180, 214, 236, 0.26); }
 
 /* ---------- Werte ---------- */
-.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 34px; }
+.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 36px; }
 .value {
   background: var(--flaeche);
   border: 1px solid var(--card-kante);
@@ -184,18 +218,22 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
 }
 .value .icon {
-  width: 46px; height: 46px; border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  background: #16161A;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  font-size: 1.35rem;
+  /* Eigene Linien-Symbole statt Emoji: gleiche Strichstärke, gleiche
+     Sprache wie das Logo. Bewusst ohne Kachel – auf mattem Schwarz wirkt
+     das Zeichen für sich ruhiger als in einem Kästchen. */
+  width: 34px; height: 34px;
+  color: var(--diamant);
+  filter: drop-shadow(0 0 16px rgba(180, 214, 236, 0.20));
 }
-.value h3 { font-size: 1.08rem; margin-top: 14px; }
-.value p { color: var(--ink-soft); font-size: 0.95rem; margin-top: 6px; }
+.value .icon svg { width: 100%; height: 100%; display: block; }
+.value h3 { font-size: var(--t-h4); margin-top: 16px;
+  line-height: var(--z-h4);
+}
+.value p { color: var(--ink-soft); font-size: var(--t-klein); margin-top: 8px; }
 
 /* ---------- App-Detailseiten ---------- */
 .crumb { max-width: 1060px; margin: 0 auto; padding: 22px 24px 0; }
-.crumb a { color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+.crumb a { color: var(--ink-soft); text-decoration: none; font-size: var(--t-klein); font-weight: 500; }
 .crumb a:hover { color: var(--diamant); }
 
 .apphead { max-width: 1060px; margin: 0 auto; padding: 26px 24px 10px; display: flex; gap: 30px; align-items: flex-start; }
@@ -206,15 +244,15 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
   flex-shrink: 0;
 }
 .apphead h1 {
-  font-size: clamp(2.1rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.15;
+  font-size: clamp(2.1rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.035em; line-height: var(--z-display);
   background: linear-gradient(108deg, #9FC6DF 0%, #EAF4FB 12%, #FFFFFF 24%, #A9CFE6 38%, #FFFFFF 50%, #C6E1F3 62%, #86B2CD 76%, #F2F9FD 90%, #FFFFFF 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
 }
-.apphead .claim { font-size: 1.22rem; color: var(--ink-soft); margin-top: 8px; }
-.apphead .meta { margin-top: 16px; font-size: 0.9rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.apphead .claim { font-size: var(--t-lead); color: var(--ink-soft); margin-top: var(--a-titel); }
+.apphead .meta { margin-top: 16px; font-size: var(--t-klein); color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
 .badge {
-  display: inline-block; font-size: 0.8rem; font-weight: 700;
+  display: inline-block; font-size: var(--t-mikro); font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
   padding: 5px 12px; border-radius: 999px;
   color: var(--diamant); background: rgba(180, 214, 236, 0.14); border: 1px solid var(--line);
@@ -228,22 +266,25 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 }
 
 .appintro { max-width: 1060px; margin: 0 auto; padding: 10px 24px 0; }
-.appintro p { max-width: 700px; font-size: 1.1rem; color: var(--ink-soft); }
+.appintro p { max-width: 700px; font-size: var(--t-lead); color: var(--ink-soft); }
 
 .toc { max-width: 1060px; margin: 26px auto 0; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
 .toc a {
-  font-size: 0.86rem; font-weight: 600; text-decoration: none;
+  font-size: var(--t-mikro); font-weight: 600; text-decoration: none;
   color: var(--ink-soft); background: var(--flaeche);
   border: 1px solid var(--card-kante); padding: 6px 13px; border-radius: 999px;
 }
 .toc a:hover { color: var(--diamant); background: rgba(180, 214, 236, 0.10); border-color: rgba(180, 214, 236, 0.26); }
 
-.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 44px; }
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: var(--a-block); }
 .feature.flip .feature-text { order: 2; }
 .feature > :only-child { grid-column: 1 / -1; max-width: 760px; }
-.feature h3 { font-size: 1.55rem; letter-spacing: -0.02em; }
-.feature .eyebrow { color: var(--diamant); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; }
-.feature p { color: var(--ink-soft); margin-top: 10px; }
+.feature h2 { font-size: var(--t-h3); letter-spacing: -0.02em;
+  line-height: var(--z-h3);
+  margin-top: 0;
+}
+.feature .eyebrow { color: var(--diamant); font-weight: 700; font-size: var(--t-mikro); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--a-etikett); }
+.feature p { color: var(--ink-soft); margin-top: var(--a-titel); }
 .feature ul { margin-top: 14px; padding-left: 0; list-style: none; display: grid; gap: 9px; }
 .feature ul li { color: var(--ink-soft); padding-left: 26px; position: relative; }
 .feature ul li::before {
@@ -268,7 +309,7 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 }
 .shot img { display: block; width: 100%; height: auto; border-radius: 18px; }
 
-.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 30px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 32px; }
 .mini {
   background: var(--flaeche);
   border: 1px solid var(--card-kante);
@@ -276,17 +317,22 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
   border-radius: 22px; padding: 24px 22px;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
 }
-.mini h4 { font-size: 1.05rem; letter-spacing: -0.01em; }
-.mini p { color: var(--ink-soft); font-size: 0.95rem; margin-top: 6px; }
+.mini h3 { font-size: var(--t-h4); letter-spacing: -0.01em;
+  line-height: var(--z-h4);
+}
+.mini p { color: var(--ink-soft); font-size: var(--t-klein); margin-top: 8px; }
 
 /* Abschnitt „Ehrlich gesagt" – Grenzen offen benennen */
 .honest {
-  margin-top: 40px; border-radius: var(--radius);
+  margin-top: var(--a-block); border-radius: var(--radius);
   background: var(--flaeche);
   border: 1px solid var(--card-kante);
   padding: 32px 30px;
 }
-.honest h3 { font-size: 1.3rem; letter-spacing: -0.02em; }
+.honest h2 { font-size: var(--t-h3); letter-spacing: -0.02em;
+  line-height: var(--z-h3);
+  margin-top: 0;
+}
 .honest ul { margin-top: 14px; padding-left: 0; list-style: none; display: grid; gap: 10px; }
 .honest ul li { color: var(--ink-soft); padding-left: 26px; position: relative; }
 .honest ul li::before { content: "–"; position: absolute; left: 6px; top: 0; color: var(--diamant); font-weight: 700; }
@@ -298,13 +344,15 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
   background: rgba(224, 184, 96, 0.07);
   padding: 22px 24px;
 }
-.notice h4 { font-size: 1rem; color: #E8C878; }
-.notice p { font-size: 0.94rem; color: var(--ink-soft); margin-top: 6px; }
+.notice h3 { font-size: var(--t-h4); color: #E8C878;
+  line-height: var(--z-h4);
+}
+.notice p { font-size: var(--t-klein); color: var(--ink-soft); margin-top: 8px; }
 
 .specs { margin-top: 30px; display: grid; gap: 0; }
 .specs .row { display: grid; grid-template-columns: 220px 1fr; gap: 20px; padding: 14px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
-.specs .row dt { font-weight: 600; font-size: 0.95rem; }
-.specs .row dd { color: var(--ink-soft); font-size: 0.95rem; }
+.specs .row dt { font-weight: 600; font-size: var(--t-klein); }
+.specs .row dd { color: var(--ink-soft); font-size: var(--t-klein); }
 @media (max-width: 560px) { .specs .row { grid-template-columns: 1fr; gap: 3px; } }
 
 /* ---------- Kontakt ---------- */
@@ -319,7 +367,7 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 .contact-card p { color: var(--ink-soft); max-width: 480px; margin: 8px auto 0; }
 .contact-card a { color: var(--diamant); }
 .contact-form { max-width: 560px; margin: 28px auto 0; text-align: left; display: grid; gap: 16px; }
-.contact-form .field label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.contact-form .field label { display: block; font-size: var(--t-klein); font-weight: 600; color: var(--ink); margin-bottom: 6px; }
 .contact-form input, .contact-form select, .contact-form textarea {
   width: 100%; font: inherit; color: var(--ink);
   background: var(--flaeche);
@@ -339,13 +387,13 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 .contact-form button.send {
   justify-self: center; padding: 13px 34px; border-radius: 999px; border: none; cursor: pointer;
   background: linear-gradient(135deg, var(--diamant-hell), var(--diamant));
-  color: #08131A; font: inherit; font-weight: 700; font-size: 1.02rem;
+  color: #08131A; font: inherit; font-weight: 700; font-size: var(--t-body);
   box-shadow: 0 14px 34px rgba(180, 214, 236, 0.22);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .contact-form button.send:hover { transform: translateY(-2px); }
 .contact-form button.send:disabled { opacity: 0.6; transform: none; cursor: default; }
-.form-note { font-size: 0.82rem; color: var(--ink-soft); text-align: center; margin-top: 2px; }
+.form-note { font-size: var(--t-mikro); color: var(--ink-soft); text-align: center; margin-top: 2px; }
 .form-note a { color: var(--diamant); }
 .form-status { display: none; margin: 26px auto 0; max-width: 480px; padding: 18px 22px; border-radius: 18px; font-weight: 500; }
 .form-status.ok { display: block; background: rgba(96, 190, 130, 0.12); color: #8FD9AC; border: 1px solid rgba(96, 190, 130, 0.30); }
@@ -355,14 +403,14 @@ h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 40px; padding: 34px 24px 44px;
-  text-align: center; color: var(--ink-soft); font-size: 0.92rem;
+  text-align: center; color: var(--ink-soft); font-size: var(--t-klein);
 }
 footer .foot-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; color: var(--ink); }
 footer .foot-brand img { width: 22px; height: 22px; }
 footer .footlinks { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
 footer .footlinks a { color: var(--ink-soft); text-decoration: none; }
 footer .footlinks a:hover { color: var(--diamant); text-decoration: underline; }
-footer .copy { margin-top: 14px; font-size: 0.88rem; }
+footer .copy { margin-top: 14px; font-size: var(--t-mikro); }
 
 /* ---------- Rechtsseiten ---------- */
 .legal { max-width: 760px; }
@@ -371,12 +419,15 @@ footer .copy { margin-top: 14px; font-size: 0.88rem; }
   background: linear-gradient(108deg, #9FC6DF 0%, #EAF4FB 12%, #FFFFFF 24%, #A9CFE6 38%, #FFFFFF 50%, #C6E1F3 62%, #86B2CD 76%, #F2F9FD 90%, #FFFFFF 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
+  line-height: var(--z-display);
 }
-.legal h2 { font-size: 1.25rem; margin-top: 34px; letter-spacing: -0.015em; }
-.legal p { color: var(--ink-soft); margin-top: 10px; }
+.legal h2 { font-size: var(--t-h3); margin-top: 36px; letter-spacing: -0.015em;
+  line-height: var(--z-h3);
+}
+.legal p { color: var(--ink-soft); margin-top: var(--a-absatz); }
 .legal a { color: var(--diamant); }
 .legal address { font-style: normal; color: var(--ink); margin-top: 10px; line-height: 1.75; }
-.legal .updated { font-size: 0.88rem; color: var(--ink-soft); margin-top: 40px; }
+.legal .updated { font-size: var(--t-mikro); color: var(--ink-soft); margin-top: 40px; }
 
 /* Sprungziele nicht unter die klebende Kopfzeile schieben. */
 [id] { scroll-margin-top: 124px; }
