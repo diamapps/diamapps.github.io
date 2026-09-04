@@ -1,12 +1,17 @@
-// Contact form → Web3Forms relay (English page). Identical to kontakt.js,
-// only the visible texts differ. The destination address is stored with the
-// service and deliberately does NOT appear here – the access key is meant
-// for public HTML according to Web3Forms.
+// Contact form → Web3Forms relay (English page). The access key, and with it
+// the destination address, lives in formular-schluessel.js – that file is
+// language-neutral. Only the visible texts differ between the two scripts.
 (function () {
-  var ACCESS_KEY = "b4ac2077-1ffb-4481-a15c-ada364ed1a0f";
+  var ACCESS_KEY = window.DIAMAPPS_FORM_KEY;
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
   if (!form) return;
+  if (!ACCESS_KEY) {
+    status.className = "form-status err";
+    status.textContent = "The form is unavailable right now. Please write to us directly at support@diamapps.com.";
+    form.querySelector("button.send").disabled = true;
+    return;
+  }
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();

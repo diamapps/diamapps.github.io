@@ -1,11 +1,16 @@
-// Kontaktformular → Web3Forms-Relay. Die Ziel-E-Mail ist beim Dienst
-// hinterlegt und taucht hier bewusst NICHT auf – der Access Key ist
-// laut Web3Forms ausdrücklich für öffentliches HTML gedacht.
+// Kontaktformular → Web3Forms-Relay. Der Zugangsschlüssel und damit die
+// Zieladresse stehen in formular-schluessel.js – diese Datei ist sprachneutral.
 (function () {
-  var ACCESS_KEY = "b4ac2077-1ffb-4481-a15c-ada364ed1a0f";
+  var ACCESS_KEY = window.DIAMAPPS_FORM_KEY;
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
   if (!form) return;
+  if (!ACCESS_KEY) {
+    status.className = "form-status err";
+    status.textContent = "Das Formular ist gerade nicht verfügbar. Bitte schreiben Sie uns direkt an support@diamapps.com.";
+    form.querySelector("button.send").disabled = true;
+    return;
+  }
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
