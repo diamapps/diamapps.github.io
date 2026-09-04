@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact – DiamApps</title>
-<meta name="description" content="Get in touch: an email to support@diamapps.com is all it takes – for questions about DiamVAT, DiamLaw and DiamMath, for feedback and for everything else.">
+<meta name="description" content="Get in touch: a contact form for questions about DiamVAT, DiamLaw and DiamMath, for feedback and for everything else – or write straight to support@diamapps.com.">
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon-diamant.svg">
 <link rel="canonical" href="https://diamapps.com/en/contact/">
 <link rel="alternate" hreflang="en" href="https://diamapps.com/en/contact/">
@@ -16,14 +16,14 @@
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://diamapps.com/en/contact/">
 <meta property="og:title" content="Contact – DiamApps">
-<meta property="og:description" content="Get in touch: an email to support@diamapps.com is all it takes – for questions about the apps, for feedback and for everything else.">
+<meta property="og:description" content="Get in touch: a contact form for questions about the apps, for feedback and for everything else – or simply write us an email.">
 <meta property="og:image" content="https://diamapps.com/assets/og-diamapps.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DiamApps – diamond logo with the apps DiamVAT, DiamLaw and DiamMath">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact – DiamApps">
-<meta name="twitter:description" content="Get in touch: an email to support@diamapps.com is all it takes – for questions about the apps, for feedback and for everything else.">
+<meta name="twitter:description" content="Get in touch: a contact form for questions about the apps, for feedback and for everything else – or simply write us an email.">
 <meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.jpg">
 <meta name="theme-color" content="#050505">
 <link rel="stylesheet" href="../../assets/styles.css">
@@ -58,7 +58,7 @@
     <div class="kicker">Contact</div>
     <h1>Let’s talk</h1>
     <p>Do you have a question about one of the apps, some feedback, a bug you have run into or an idea we have not had yet? Then please write to us. There is no call centre behind DiamApps, just a very small workshop – your message is read and answered personally.</p>
-    <p>There is exactly one way to reach us, and that is deliberate: email. We do without a contact form so that your message does not travel through a service provider’s servers before it reaches us.</p>
+    <p>The choice is yours: the form further down, or an email straight to <a href="mailto:support@diamapps.com">support@diamapps.com</a>. Both end up in the same mailbox – one is more convenient, the other takes your message past no service provider at all. The form explains what happens in each case.</p>
   </section>
 
   <section id="ways">
@@ -84,20 +84,47 @@
     <div class="contact-card">
       <div class="kicker">Send a message</div>
       <h2>Write to us</h2>
-      <p>The quickest way is to tell us straight away which app you mean and which device you are using. That way we do not have to ask first.</p>
-
-      <a class="mailto" href="mailto:support@diamapps.com?subject=Enquiry%20for%20DiamApps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.2 7.1 8.1 5.4a1.5 1.5 0 0 0 1.7 0l8.1-5.4"/></svg>support@diamapps.com</a>
-      <p class="mailto-hinweis">Tapping it opens your mail program. If you use webmail, simply copy the address: <code>support@diamapps.com</code></p>
+      <p>Just fill in the form – you will receive a personal reply at the address you enter here. The quickest way is to tell us straight away which app you mean and which device you are using.</p>
 
       <div class="notice">
-        <h3>What helps us answer</h3>
-        <ul class="hilfeliste">
-          <li>Which app is it about – DiamVAT, DiamLaw or DiamMath?</li>
-          <li>Which device, and which version of iOS or macOS?</li>
-          <li>For a bug: what did you do, what happened, and what had you expected?</li>
-        </ul>
-        <p>Your message goes straight into our mailbox at IONOS SE in Germany – no form or delivery service in between, no account, no advertising. What happens to your message and what rights you have is explained in our <a href="/en/privacy/">privacy policy</a>.</p>
+        <h3>What happens to your data along the way</h3>
+        <p>For delivery we use the service Web3Forms, run by Web3Creative of Palakkad, India. Your name, your email address, your message and your IP address are transmitted. For spam screening, CleanTalk and Akismet in the United States also receive your IP address and your email address. The provider keeps submissions for up to three years.</p>
+        <p><strong>If you would rather avoid that:</strong> simply write to us directly at <a href="mailto:support@diamapps.com">support@diamapps.com</a>. Your message then goes straight into our mailbox in Germany. All the details are set out in our <a href="/en/privacy/">privacy policy</a>.</p>
       </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <p class="form-note" style="text-align:left;margin-bottom:4px;">Fields marked * are required.</p>
+        <div class="field">
+          <label for="cf-name">Your name <span aria-hidden="true">*</span></label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="First and last name">
+        </div>
+        <div class="field">
+          <label for="cf-email">Your email address <span aria-hidden="true">*</span></label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="name@example.com">
+        </div>
+        <div class="field">
+          <label for="cf-topic">What is it about?</label>
+          <div class="select-wrap">
+            <select id="cf-topic" name="topic">
+              <option>Question about DiamVAT</option>
+              <option>Question about DiamLaw</option>
+              <option>Question about DiamMath</option>
+              <option>Feedback</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-message">Your message <span aria-hidden="true">*</span></label>
+          <textarea id="cf-message" name="message" required placeholder="How can we help?"></textarea>
+        </div>
+        <input type="checkbox" name="botcheck" tabindex="-1" style="display:none" aria-hidden="true">
+        <button class="send" type="submit">Send message</button>
+        <div class="form-note">What you enter is used solely to answer your enquiry. We use a service provider to deliver it – see our privacy notice for details. More about this in our <a href="/en/privacy/">privacy policy</a>.</div>
+      </form>
+      <div class="form-status" id="formStatus" role="status"></div>
+
+      <p class="mailto-hinweis" style="margin-top:26px;">Prefer your own mail program? <a href="mailto:support@diamapps.com">support@diamapps.com</a></p>
     </div>
   </section>
 </main>
@@ -115,5 +142,7 @@
   <div class="copy">© 2026 DiamApps</div>
 </footer>
 
+<script src="/assets/formular-schluessel.js"></script>
+<script src="/assets/kontakt-en.js"></script>
 </body>
 </html>
