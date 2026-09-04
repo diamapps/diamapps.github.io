@@ -51,9 +51,11 @@
       });
     }).catch(function () {
       status.className = "form-status err";
+      status.tabIndex = -1;
       status.textContent = "Das hat leider nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.";
       button.disabled = false;
       button.textContent = "Nachricht senden";
+      status.focus();
     });
   });
 })();

@@ -19,7 +19,7 @@
 
     var button = form.querySelector("button.send");
     button.disabled = true;
-    button.textContent = "Sending …";
+    button.textContent = "Sending…";
     status.className = "form-status";
     status.textContent = "";
 
@@ -52,9 +52,11 @@
       });
     }).catch(function () {
       status.className = "form-status err";
+      status.tabIndex = -1;
       status.textContent = "That did not work, unfortunately. Please try again in a few minutes.";
       button.disabled = false;
       button.textContent = "Send message";
+      status.focus();
     });
   });
 })();

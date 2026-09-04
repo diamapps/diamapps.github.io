@@ -130,7 +130,7 @@
       <div class="feature-text">
         <div class="eyebrow">Batch checking</div>
         <h2>Hundreds in one go</h2>
-        <p>Hand over the export from your bookkeeping as a CSV, text or Excel file. DiamVAT recognises the columns and proposes the mapping – nothing is imported automatically, you confirm the preview. The check then works through the rows one by one, deliberately one request at a time rather than in parallel, because parallel requests over a mobile connection returned false “invalid” answers in field testing.</p>
+        <p>Hand over the export from your bookkeeping as a CSV, text or Excel file. DiamVAT recognises the columns and proposes the mapping – nothing is imported automatically; you confirm the preview. The check then works through the rows one by one, deliberately one request at a time rather than in parallel, because parallel requests over a mobile connection returned false “invalid” answers in field testing.</p>
         <ul>
           <li>Every “invalid” is automatically checked a second time before it is allowed to stand in the record.</li>
           <li>Progress is visible, and each row carries its own result.</li>
@@ -148,7 +148,7 @@
     <div class="feature">
       <div class="feature-text">
         <div class="eyebrow">Zusammenfassende Meldung</div>
-        <h2>With the country rules of section 18a UStG built in</h2>
+        <h3>With the country rules of section 18a UStG built in</h3>
         <p>Enter reporting lines or take them from an import – DiamVAT knows the rules. German numbers do not belong in the Zusammenfassende Meldung, nor do non-EU numbers, and Northern Ireland (XI) counts for goods only. Lines that do not qualify are never deleted. They are visibly marked as “do not report” and can be brought back at any time. At the end you get a CSV in the ELSTER import format.</p>
         <ul>
           <li>The year grid shows the quarters with their three months alongside and the calendar year below; the rare two-month supplementary periods can be shown when you need them – 21 official reporting periods in all.</li>
@@ -162,7 +162,7 @@
     <div class="feature">
       <div class="feature-text">
         <div class="eyebrow">Umsatzsteuer-Voranmeldung</div>
-        <h2>On the official form USt 1 A</h2>
+        <h3>On the official form USt 1 A</h3>
         <p>The advance return follows the official form, with all 50 codes across eleven sections – each with its official number and an explanation. DiamVAT does the tax itself: the tax amount appears immediately below each taxable amount, the remaining prepayment always stays at the top, and the full calculation can be opened. Whenever you like, you can view the completed return as a three-page PDF of the official form.</p>
         <ul>
           <li>Checking starts as you type. Does the tax match the rate? Is the taxable amount missing for a tax figure? Is an amount negative where the authorities require none?</li>
@@ -205,7 +205,7 @@
       <div class="feature-text">
         <div class="eyebrow">On the Mac</div>
         <h2>To ELSTER on the Mac – in test mode</h2>
-        <p>The Mac app links the tax administration’s official ERiC interface (version 44.2.4.0). Its built-in check raises objections to your return in exactly the words the acceptance server would later use, without any network contact at all. <strong>Important, and said plainly:</strong> in this version transmission goes solely to the tax administration’s test system – filing with legal effect is deliberately not possible. All four types of return have in fact been transmitted this way to the test system and accepted there.</p>
+        <p>The Mac app integrates the tax administration’s official ERiC interface (version 44.2.4.0). Its built-in check raises objections to your return in exactly the words the acceptance server would later use, without any network contact at all. <strong>Important, and said plainly:</strong> in this version transmission goes solely to the tax administration’s test system – filing with legal effect is deliberately not possible. All four types of return have in fact been transmitted this way to the test system and accepted there.</p>
         <ul>
           <li>Before sending, the app reads back the string that will actually be transmitted and asks you to type a confirmation word.</li>
           <li>The ELSTER certificate (.pfx) is checked for authenticity and PIN as you store it, and the holder and validity are displayed. The PIN stays on that device behind Face ID or Touch ID; the certificate file itself deliberately travels through the iCloud keychain.</li>
@@ -361,7 +361,7 @@
       <h3>Legal notes</h3>
       <p>DiamVAT is a software tool for checking and preparing data. It does not provide assistance in tax matters within the meaning of the German Tax Advisory Act (Steuerberatungsgesetz) and is no substitute for tax advice. Responsibility for the accuracy and completeness of the data entered and transmitted remains with the user.</p>
       <p>ELSTER is a trademark of the Free State of Bavaria. DiamVAT is an independent product with no connection to the German tax administration; ELSTER is named solely to indicate suitability for use with it.</p>
-      <p>In this build, transmission to the tax administration is possible only as a test submission to the test system. DiamVAT cannot, in this version file a return with legal effect and therefore cannot meet a filing deadline for you.</p>
+      <p>In this build, transmission to the tax administration is possible only as a test submission to the tax administration’s test system. DiamVAT cannot, in this version, file a return with legal effect and therefore cannot meet a filing deadline for you.</p>
       <p>A qualified confirmation under section 18e UStG is no blanket protection from liability either: it documents the authority’s answer at a particular point in time, no more than that. Whether a supply is exempt is decided by the facts, not by the query.</p>
       <p>This English page is a translation provided for convenience. In case of doubt, the German version of this page prevails; the statutory provisions cited apply as worded in German law.</p>
     </div>
@@ -370,7 +370,7 @@
   <section id="honest">
     <div class="honest">
       <h2>Honestly</h2>
-      <p style="color:var(--ink-soft); margin-top:8px;">DiamVAT is a beta. These are its limits – and we would rather name them here than have you discover them later:</p>
+      <p>DiamVAT is a beta. These are its limits – and we would rather name them here than have you discover them later:</p>
       <ul>
         <li>Transmission and the official check happen on the Mac only; the ERiC interface does not exist for iOS or iPadOS. iPhone and iPad enter, calculate, pre-check and produce PDFs of the official forms.</li>
         <li>This build performs test submissions to the tax administration’s test system only. Filing with legal effect is deliberately not possible – you must still meet your deadlines the way you do today.</li>
