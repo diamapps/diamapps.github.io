@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiamVAT – USt-IdNr. prüfen, nachweisen, melden</title>
+<meta name="description" content="USt-IdNrn. über BZSt und VIES prüfen, jede Prüfung als PDF belegen und ELSTER-Meldungen am Mac vorbereiten – in dieser Fassung ausschließlich als Testübermittlung.">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="canonical" href="https://diamapps.com/apps/diamvat/">
+<link rel="alternate" hreflang="de" href="https://diamapps.com/apps/diamvat/">
+<link rel="alternate" hreflang="en" href="https://diamapps.com/en/apps/diamvat/">
+<link rel="alternate" hreflang="x-default" href="https://diamapps.com/apps/diamvat/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiamApps">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://diamapps.com/apps/diamvat/">
+<meta property="og:title" content="DiamVAT – USt-IdNr. prüfen, nachweisen, melden">
+<meta property="og:description" content="USt-IdNrn. über BZSt und VIES prüfen, jede Prüfung als PDF belegen und ELSTER-Meldungen am Mac vorbereiten – in dieser Fassung ausschließlich als Testübermittlung.">
+<meta property="og:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiamApps – Diamant-Logo mit den Apps DiamVAT, DiamLaw und DiamMath">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiamVAT – USt-IdNr. prüfen, nachweisen, melden">
+<meta name="twitter:description" content="USt-IdNrn. über BZSt und VIES prüfen, jede Prüfung als PDF belegen und ELSTER-Meldungen am Mac vorbereiten – in dieser Fassung ausschließlich als Testübermittlung.">
+<meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta name="theme-color" content="#1E62D0">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DiamVAT","applicationCategory":"FinanceApplication","operatingSystem":"iOS 26, iPadOS 26, macOS 26","softwareVersion":"1.23.3","inLanguage":["de"],"description":"USt-IdNrn. über BZSt und VIES prüfen, jede Prüfung als PDF belegen und ELSTER-Meldungen am Mac vorbereiten – in dieser Fassung ausschließlich als Testübermittlung.","publisher":{"@type":"Organization","name":"DiamApps","url":"https://diamapps.com"}}
+</script>
+</head>
+<body>
+<div class="stage" aria-hidden="true"></div>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav">
+    <a class="brandlink" href="/">
+      <img src="../../assets/diamapps-logo.svg" alt="">
+      <div class="brand">Diam<span>Apps</span></div>
+    </a>
+    <nav>
+      <a href="/#apps" class="navaktiv">Apps</a>
+      <a href="/studio/">Studio</a>
+      <a href="/support/">Support</a>
+      <a href="/kontakt/">Kontakt</a>
+      <span class="langswitch">
+        <a href="/apps/diamvat/" aria-current="true" hreflang="de">DE</a>
+        <a href="/en/apps/diamvat/" hreflang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <div class="crumb"><a href="/#apps">← Alle Apps</a></div>
+
+  <div class="apphead">
+    <img class="appicon" src="../../assets/diamvat.png" alt="DiamVAT App-Symbol – VAT im Sternenkranz, Diamantblau">
+    <div>
+      <h1>DiamVAT</h1>
+      <p class="claim">USt-IdNr. prüfen, nachweisen, melden.</p>
+      <div class="meta">
+        <span class="badge dev">Beta</span>
+        <span>Stand: September 2026 · Fassung 1.23.3 (Build 7)</span>
+      </div>
+      <div class="meta">
+        <span>iPhone und iPad mit iOS bzw. iPadOS 26, Mac mit macOS 26 · Oberfläche auf Deutsch</span>
+      </div>
+      <div class="meta">
+        <span>Die ELSTER-Übermittlung gibt es nur am Mac – und in dieser Fassung ausschließlich als Testübermittlung an den Testzugang der Steuerverwaltung.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="appintro">
+    <p>DiamVAT ist die native Umsatzsteuer-App für iPhone, iPad und Mac: Sie fragt USt-IdNrn. über die amtlichen Schnittstellen des Bundeszentralamts für Steuern und der EU-Datenbank VIES ab, dokumentiert jede Prüfung als archivierbares PDF-Protokoll und bereitet Zusammenfassende Meldung, Voranmeldung, Dauerfristverlängerung und Jahreserklärung bis zur ELSTER-Übermittlung am Mac vor – in dieser Fassung ausschließlich als Testübermittlung an den Testzugang der Steuerverwaltung. Für Einzel- und Kleinunternehmer, sachkundige Dritte und Steuerberater.</p>
+  </div>
+
+  <div class="toc">
+    <a href="#pruefen">USt-IdNr. prüfen</a>
+    <a href="#nachweis">Der Nachweis</a>
+    <a href="#stapel">Massenprüfung</a>
+    <a href="#meldungen">Meldungen vorbereiten</a>
+    <a href="#elster">Am Mac zu ELSTER</a>
+    <a href="#unternehmen">Mehrere Unternehmen</a>
+    <a href="#design">App Design</a>
+    <a href="#daten">Ihre Daten</a>
+    <a href="#details">Weitere Einzelheiten</a>
+    <a href="#rechtliches">Rechtliches</a>
+    <a href="#ehrlich">Ehrlich gesagt</a>
+  </div>
+
+  <section id="pruefen">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">USt-IdNr.-Prüfung</div>
+        <h3>Prüfen statt schätzen</h3>
+        <p>DiamVAT fragt die USt-IdNr. Ihres EU-Geschäftspartners über die amtliche Schnittstelle des Bundeszentralamts für Steuern nach § 18e Nr. 1 UStG ab – einfach oder qualifiziert. Das Ergebnis kommt in Sekunden, im Klartext und mit dem amtlichen Anfragezeitpunkt, nicht mit der Uhrzeit Ihres Geräts. Deutsche Nummern beantwortet das Bundeszentralamt nicht; die laufen über VIES bei der EU-Kommission und tragen sichtbar den Vermerk „Gültig – VIES-Bestätigung (nicht amtlich)“.</p>
+        <ul>
+          <li>Qualifizierte Bestätigung: Firmenname und Anschrift werden Feld für Feld beurteilt – stimmt überein, weicht ab, wurde nicht angefragt oder vom Mitgliedstaat nicht mitgeteilt.</li>
+          <li>Genau dieser Abgleich ist der übliche Nachweis kaufmännischer Sorgfalt beim Vertrauensschutz nach § 6a Abs. 4 UStG – DiamVAT zeigt ihn nicht nur an, sondern schreibt ihn vollständig in den PDF-Nachweis.</li>
+          <li>Ein abgebrochener oder technisch gescheiterter Versuch landet niemals als „ungültig“ im Nachweis: Jeder Fehlschlag bekommt einen eigenen Statuscode (offline, abgebrochen, Netz- oder Serverfehler).</li>
+          <li>Nummer aus Text einfügen oder vom Rechnungsfoto ablesen – die Texterkennung läuft vollständig auf dem Gerät, das Bild wird nirgends gespeichert.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="nachweis">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Nachweis</div>
+        <h3>Der Nachweis, der beim Finanzamt zählt</h3>
+        <p>Zu jeder Prüfung entsteht ein PDF-Protokoll mit allem, was ein Prüfer sehen will: eigene und geprüfte USt-IdNr., amtlicher Prüfzeitpunkt, Prüfart, Ergebnis, technischer Statuscode und Anfrage-ID. Für Massenprüfungen gibt es den mehrseitigen Sammelbericht – mit einem eigenen Abschnitt für jede Zeile, die gar nicht angefragt wurde, samt Begründung im Klartext. So geht die Rechnung auf: importiert = dokumentiert + nicht geprüft.</p>
+        <ul>
+          <li>Das Prüfarchiv ist nach Status filterbar und nach Nummer, Firmenname und Referenz durchsuchbar; ein Tipp öffnet den gespeicherten Einzelnachweis.</li>
+          <li>Export als PDF-Sammelbericht und als CSV zum Abgleich mit der Buchhaltung.</li>
+          <li>Die App löscht nie von selbst und kennt kein automatisches Ausmisten alter Prüfungen (§§ 147 AO, 14b UStG) – Löschen bleibt ausdrücklich Ihre Entscheidung.</li>
+          <li>Die Prüfprotokolle sind archivierbar. Revisionssicher im engeren Sinne sind allein die Übermittlungsprotokolle, die auch ein „Alle lokalen Daten löschen“ überstehen.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="stapel">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Massenprüfung</div>
+        <h3>Hunderte auf einmal</h3>
+        <p>Übergeben Sie den Export aus Ihrer Buchhaltung als CSV-, Text- oder Excel-Datei: DiamVAT erkennt die Spalten und schlägt die Zuordnung vor – automatisch importiert wird nichts, Sie bestätigen die Vorschau. Anschließend läuft die Prüfung Zeile für Zeile, bewusst eine Anfrage nach der anderen statt parallel, weil parallele Anfragen über Mobilfunk im Feldtest falsche „ungültig“-Antworten lieferten.</p>
+        <ul>
+          <li>Jedes „ungültig“ wird automatisch ein zweites Mal geprüft, bevor es im Nachweis stehen bleibt.</li>
+          <li>Der Fortschritt ist sichtbar, jede Zeile trägt ihr eigenes Ergebnis.</li>
+          <li>Zeilen, die nicht angefragt wurden, verschwinden nicht: Sie stehen mit Begründung im Bericht.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="meldungen">
+    <div class="kicker">Meldungen</div>
+    <h2>Meldungen vorbereiten – bis auf die Kennzahl genau</h2>
+    <p class="lead">Zusammenfassende Meldung, Voranmeldung, Dauerfristverlängerung und Jahreserklärung folgen den amtlichen Vordrucken. Gerechnet wird in der App, nicht auf einem Zettel daneben.</p>
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Zusammenfassende Meldung</div>
+        <h3>Mit den Länderregeln des § 18a UStG</h3>
+        <p>Meldezeilen erfassen oder aus dem Import übernehmen – DiamVAT kennt die Regeln: Deutsche Nummern gehören nicht in die ZM, Drittlands-Nummern auch nicht, Nordirland (XI) nur für Warenlieferungen. Unzulässige Zeilen werden nie gelöscht, sondern sichtbar als „nicht melden“ gekennzeichnet und lassen sich jederzeit zurückholen. Am Ende steht die CSV im ELSTER-Importformat.</p>
+        <ul>
+          <li>Das Jahresraster zeigt die Quartale mit ihren drei Monaten daneben und darunter das Kalenderjahr; die seltenen Zweimonats-Nachmeldungen blenden Sie bei Bedarf ein – zusammen alle 21 amtlichen Meldezeiträume.</li>
+          <li>Was Sie abgeben dürfen, ist antippbar; was noch läuft, trägt eine Uhr; was noch nicht begonnen hat, ein Schloss und beim Antippen den Grund.</li>
+          <li>Die Frist – der 25. Tag nach Ablauf des Zeitraums – steht daneben, samt dem Hinweis, dass eine Dauerfristverlängerung für die ZM gerade nicht gilt.</li>
+          <li>Erstmeldung und berichtigte Meldung, Monatsmeldung nach § 18a Abs. 1 Satz 2 mit Kopplungsprüfung und die 50.000-Euro-Grenze sind abgebildet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Voranmeldung</div>
+        <h3>Nach amtlichem Vordruck USt 1 A</h3>
+        <p>Die Voranmeldung folgt dem amtlichen Vordruck mit allen 50 Kennzahlen in elf Abschnitten – jede mit ihrer amtlichen Nummer und einer Erklärung. Die Steuer rechnet DiamVAT selbst: Unter jeder Bemessungsgrundlage steht sofort der Steuerbetrag, oben immer die verbleibende Vorauszahlung, mit aufklappbarem Rechenweg. Auf Wunsch sehen Sie die ausgefüllte Anmeldung jederzeit als dreiseitiges Formular-PDF.</p>
+        <ul>
+          <li>Geprüft wird schon beim Tippen: Passt die Steuer zum Steuersatz? Fehlt zur Steuer die Bemessungsgrundlage? Ist ein Betrag negativ, der amtlich vorzeichenlos sein muss?</li>
+          <li>Bei innergemeinschaftlichen Erwerben und §-13b-Leistungen schlägt die App die korrespondierende Vorsteuer vor – als Vorschlag, den Sie überschreiben können; danach fasst die Automatik Ihre Eingabe nie wieder an.</li>
+          <li>Für jeden Jahrgang gilt, was dort amtlich vorgesehen ist – etwa Kennzahl 23 bis 2025 und Kennzahl 500 ab 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>Dauerfristverlängerung</h4>
+        <p>Der Antrag nach dem amtlichen Vordruck USt 1 H (§§ 46–48 UStDV) ist ein eigener Bereich. Vierteljahreszahler stellen den reinen Antrag, Monatszahlern rechnet die App die Sondervorauszahlung aus – ein Elftel, abgerundet.</p>
+      </div>
+      <div class="mini">
+        <h4>Jahreserklärung</h4>
+        <p>Vordruck USt 2 A mit allen Abschnitten A bis K für die Jahrgänge 2025 und 2026, dazu die Anlage UN und die Anlage FV für Fiskalvertreter. Als Formular-PDF: sechs Seiten Hauptvordruck, jede belegte Anlage auf einer eigenen Seite.</p>
+      </div>
+      <div class="mini">
+        <h4>Aus den Voranmeldungen übernehmen</h4>
+        <p>Die Jahreswerte Ihrer Voranmeldungs-Entwürfe wandern auf Wunsch in die Jahreserklärung – mit Vorschau je Zeile, bevor irgendetwas geschrieben wird. Kennzahlen ohne eindeutiges Ziel weist die App ausdrücklich als Handarbeit aus.</p>
+      </div>
+      <div class="mini">
+        <h4>Kleinunternehmer nach § 19 UStG</h4>
+        <p>Wer Umsätze nach § 19 Abs. 1 UStG erklärt, darf viele Felder gerade nicht ausfüllen. DiamVAT prüft acht amtliche Regeln dazu und die 100.000-Euro-Grenze – als reine Wertlogik, also auch auf iPhone und iPad ohne Mac.</p>
+      </div>
+      <div class="mini">
+        <h4>Beanstandungen im Klartext</h4>
+        <p>Jede Beanstandung der Prüfung wird zu einer eigenen Karte mit Gewicht, betroffener Stelle und amtlichem Wortlaut – ein Tipp springt direkt in den Formularabschnitt, in die Firmendaten oder zum Zeitraum.</p>
+      </div>
+      <div class="mini">
+        <h4>Eigener ZM-Import</h4>
+        <p>Für die ZM gibt es einen zweiten Importweg, den Sie einmalig auf die Spaltennamen und Leistungsart-Codes Ihrer Buchhaltung einstellen. Die Vorschau zeigt bewusst auch fehlerhafte Zeilen, damit ein Erfassungsfehler nicht stillschweigend verschwindet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="elster">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Am Mac</div>
+        <h3>Am Mac zu ELSTER – im Testbetrieb</h3>
+        <p>Die Mac-App bindet die amtliche ERiC-Schnittstelle der Steuerverwaltung ein (Fassung 44.2.4.0). Die eingebaute Prüfung beanstandet Ihre Meldung wortgleich so, wie es später der Annahmeserver täte, ohne jeden Netzkontakt. <strong>Wichtig und ehrlich:</strong> Die Übermittlung erfolgt in dieser Fassung ausschließlich als Testübermittlung an den Testzugang der Steuerverwaltung – eine Abgabe mit steuerlicher Wirkung ist bewusst nicht möglich. Alle vier Meldungsarten wurden auf diesem Weg tatsächlich an den Testzugang übermittelt und dort angenommen.</p>
+        <ul>
+          <li>Vor dem Versand liest die App die tatsächlich gesendete Zeichenkette gegen und verlangt ein Bestätigungswort.</li>
+          <li>Das ELSTER-Zertifikat (.pfx) wird beim Hinterlegen auf Echtheit und PIN geprüft, Inhaber und Gültigkeit werden angezeigt. Die PIN bleibt gerätelokal hinter Face ID oder Touch ID; die Zertifikatsdatei selbst wandert bewusst über den iCloud-Schlüsselbund.</li>
+          <li>Jede angenommene Übermittlung legt ein Protokoll ab: Sendedatum, Empfänger, Zeitraum, Zertifikat, Hersteller-Kennnummer, Transferticket, die Werte aus dem gesendeten XML und die Serverantwort – als PDF, und es überlebt das Löschen des Entwurfs ebenso wie „Alle lokalen Daten löschen“.</li>
+          <li>Die rechtlichen Hinweise der Finanzverwaltung – das Schreiben zu den Artikeln 12 bis 14 DSGVO, der wörtliche Datenschutzhinweis, der Hinweis auf lokal bleibende Protokolldateien und die Empfehlung zur Datensicherung – werden vor der ersten Nutzung angezeigt und bestätigt, mit Datum und Dokumentversion, und bleiben jederzeit abrufbar.</li>
+          <li>Bei der Wirtschafts-Identifikationsnummer trennt die App das fünfstellige Unterscheidungsmerkmal automatisch ab, weil die amtlichen Felder nur DE und neun Ziffern annehmen.</li>
+        </ul>
+      </div>
+    </div>
+
+    <dl class="specs">
+      <div class="row">
+        <dt>iPhone und iPad</dt>
+        <dd>iOS bzw. iPadOS 26: erfassen, rechnen, vorab prüfen und Formular-PDFs erzeugen. Die Entwürfe wandern über iCloud zum Mac.</dd>
+      </div>
+      <div class="row">
+        <dt>Mac</dt>
+        <dd>macOS 26: zusätzlich die amtliche Prüfung und die Übermittlung – in dieser Fassung ausschließlich als Testübermittlung an den Testzugang der Steuerverwaltung.</dd>
+      </div>
+      <div class="row">
+        <dt>Warum nur am Mac</dt>
+        <dd>Die ERiC-Schnittstelle der Finanzverwaltung gibt es nur für Desktop-Systeme; für iOS und iPadOS wird sie nicht angeboten.</dd>
+      </div>
+      <div class="row">
+        <dt>Was Sie mitbringen</dt>
+        <dd>Ihr eigenes ELSTER-Zertifikat (.pfx) samt PIN. Die Hersteller-Kennnummer ist fest im Produkt hinterlegt, dafür müssen Sie nichts eintragen.</dd>
+      </div>
+      <div class="row">
+        <dt>Sprache</dt>
+        <dd>Die Oberfläche ist auf Deutsch.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="unternehmen">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Mandanten</div>
+        <h3>Mehrere Unternehmen, ein Überblick</h3>
+        <p>Legen Sie beliebig viele Unternehmen an, jedes mit eigener USt-IdNr., Steuernummer, Rechtsform, Kurznamen und Notizen. Das aktive Unternehmen bestimmt, was die App zeigt – Prüfverlauf, Importe, ZM-Zeilen, Voranmeldungen und Erklärungen gehören immer zu ihm. Gewechselt wird oben im Dashboard oder in der Seitenleiste.</p>
+        <ul>
+          <li>Das Dashboard ist die erste Ansicht: sieben Kennzahl-Kacheln, Schnellaktionen, offene Hinweise, die letzten Prüfungen und Importe sowie der Stand der ZM. „Amtlich geprüft“ zählt dabei bewusst ohne die VIES-Auskünfte.</li>
+          <li>Die Kacheln entstehen über Zählabfragen – der Aufbau bleibt gleich schnell, ob 500 oder 5.000 Datensätze im Archiv liegen.</li>
+          <li>Sie tippen die Steuernummer so ein, wie sie auf dem Bescheid steht; DiamVAT rechnet sie in das 13-stellige ELSTER-Format um – bestätigt für alle 16 Bundesländer. Zusätzlich nennt die App das Finanzamt aus dem amtlichen Verzeichnis mit 746 Ämtern.</li>
+          <li>Dieselbe USt-IdNr. bei zwei Unternehmen meldet die App als Fehler und sperrt die Übermittlung: Zwei Unternehmen können nicht unter einer USt-IdNr. melden.</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diamvat-dashboard.jpg" width="640" height="1391" loading="lazy"
+             alt="Das Dashboard von DiamVAT mit Gesamtstatus, geprüften USt-IdNrn., ZM-Meldezeilen, Voranmeldung und ELSTER-Testübermittlungen">
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="kicker">App Design</div>
+    <h2>So, wie Sie es mögen</h2>
+    <p class="lead">DiamVAT teilt die Gestaltungsschicht aller DiamApps – und der Ergebnis-Status bleibt dabei immer voll lesbar.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Hintergrundbilder</h4>
+        <p>Sechs mitgelieferte, bewusst schlichte Hintergründe – Nebelblau, Diamant, Papier, Graphit, Salbei, Horizont – oder Ihr eigenes Foto. Für alle Bereiche gemeinsam oder für Dashboard, Prüfen, ZM und ELSTER einzeln, jeweils mit eigenem Deckkraft-Regler (Vorgabe 0,25).</p>
+      </div>
+      <div class="mini">
+        <h4>Schrift je Bereich</h4>
+        <p>Sechs Schriften von San Francisco über New York und Charter bis Georgia und Palatino, dazu Titel- und Textgröße – je Bereich einstellbar, mit Live-Vorschau.</p>
+      </div>
+      <div class="mini">
+        <h4>Farben und Karten</h4>
+        <p>Sieben Akzentfarben von Tiefblau bis Graphit, sieben Kartentönungen, ein Transparenz-Regler, Text-Deckkraft und ein Eckenradius von kantig bis rund – die Vorschau darüber verändert sich sofort mit.</p>
+      </div>
+      <div class="mini">
+        <h4>Hell, dunkel oder System</h4>
+        <p>Die Helligkeit folgt dem System oder steht fest. Ergebnis-Status und Formulare bleiben dabei immer voll lesbar, egal wie transparent Sie es mögen.</p>
+      </div>
+      <div class="mini">
+        <h4>Sechs App-Symbole</h4>
+        <p>Diamant, Rubin, Saphir, Smaragd, Gold oder Silber – alle pixelgenau aus demselben Motiv, nur die Edelsteinfarbe wechselt. Die Wahl bleibt bewusst eine Einstellung dieses Geräts.</p>
+      </div>
+      <div class="mini">
+        <h4>Alles anordnen</h4>
+        <p>Welche Karten auf dem Dashboard stehen, welche zwei bis fünf Bereiche unten in der Leiste liegen, wie die Seitenleiste gegliedert ist – bis hin zur Reihenfolge der vier Entwurfs-Karten in der ELSTER-Zentrale. Ausgeblendete Bereiche bleiben über die Seitenleiste erreichbar, und die Anordnungen wandern über iCloud mit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="daten">
+    <div class="kicker">Datenschutz</div>
+    <h2>Ihre Daten bleiben Ihre</h2>
+    <p class="lead">Prüfverlauf, Importe, ZM-Zeilen, Entwürfe, Unternehmen und Ihre Design- und Navigationseinstellungen gleichen sich über Ihr privates iCloud-Konto zwischen Ihren Geräten ab – verschlüsselt bei Apple, ohne einen einzigen Server des Herstellers. Datei am Mac importieren, Prüfung am iPhone starten: derselbe Stand überall.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Zustimmung vor dem Abgleich</h4>
+        <p>Beim Einschalten sagt die App ausdrücklich, dass auch sensible Unternehmensdaten mitgehen, und wartet auf Ihre Zustimmung. Wirksam wird die Umstellung nach einem Neustart der App.</p>
+      </div>
+      <div class="mini">
+        <h4>Bewusst gerätelokal</h4>
+        <p>Nicht mit: das App-Symbol, die Zertifikats-PIN, das aktive Unternehmen und der eingestellte ZM-Meldezeitraum – ein herüberkommender Zeitraum würde eine laufende Erfassung stumm umetikettieren.</p>
+      </div>
+      <div class="mini">
+        <h4>Diagnose ohne Preisgabe</h4>
+        <p>Das lokale Diagnoseprotokoll zeigt Status, Antwortcode, Dauer und Transportfehler. Beim Teilen gibt es einen eigenen Weg, der die USt-IdNrn. maskiert – gedacht für Berufsgeheimnisträger nach § 203 StGB.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="kicker">Nebenpunkte</div>
+    <h2>Weitere Einzelheiten</h2>
+    <p class="lead">Kleinigkeiten, die im Alltag den Unterschied machen.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Compliance-Verlauf</h4>
+        <p>Prüfungen, Importe, ZM- und Voranmeldungs-Entwürfe sowie alle angenommenen Testübermittlungen laufen in einer Zeitleiste zusammen, mit Filtern und Suche. Der Verlauf ist ein Arbeitsüberblick – die belastbaren Nachweise bleiben das Prüfarchiv und die Übermittlungsprotokolle.</p>
+      </div>
+      <div class="mini">
+        <h4>Ein Auftrag, ein Eintrag</h4>
+        <p>Eine Massenprüfung erscheint im Verlauf als ein Auftrag mit korrekten Zählern; ein Tipp öffnet den gespeicherten Einzelnachweis.</p>
+      </div>
+      <div class="mini">
+        <h4>CSV, sauber gebaut</h4>
+        <p>Der CSV-Export folgt RFC 4180 – Trennzeichen, Anführungszeichen und Zeilenumbrüche in Feldern werden korrekt behandelt, damit die Buchhaltung die Datei ohne Nacharbeit einliest.</p>
+      </div>
+      <div class="mini">
+        <h4>Anleitungen und zwei Aufnahmen</h4>
+        <p>Acht Schritt-für-Schritt-Anleitungen von der einfachen Prüfung bis zur fertigen ZM, einschließlich der Frage, welchen Meldezeitraum Sie überhaupt haben. Dazu zwei echte Bildschirmaufnahmen aus der App, unter einer Minute, ohne Autoplay und ohne Netzverbindung.</p>
+      </div>
+      <div class="mini">
+        <h4>Beispieldaten für Vorführungen</h4>
+        <p>Dashboard, Verlauf, Import und ZM lassen sich mit Musterdaten ansehen, ohne echte Mandantendaten – erreichbar nur über Einstellungen und Entwickler, damit sich Beispieldaten nie unter echte Prüfungen mischen.</p>
+      </div>
+      <div class="mini">
+        <h4>Am großen Bildschirm</h4>
+        <p>Der Mac hat eine echte Systemseitenleiste mit richtigen Inhaltszielen statt Blättern. Auf iPad und Mac stehen bei Voranmeldung und Jahreserklärung die Abschnitte links und das Formular rechts.</p>
+      </div>
+      <div class="mini">
+        <h4>Ein Zertifikat je Unternehmen</h4>
+        <p>Alle vier Meldungsarten arbeiten mit demselben aktiven Zertifikat; jedes Unternehmen kann zusätzlich ein bevorzugtes Zertifikat hinterlegt haben.</p>
+      </div>
+      <div class="mini">
+        <h4>ZM-Entwurf als Schnappschuss</h4>
+        <p>Ein ZM-Entwurf friert die aggregierten Zeilen zum Zeitpunkt der Erstellung ein – so können mehrere Stände eines Quartals nebeneinander bestehen.</p>
+      </div>
+      <div class="mini">
+        <h4>Archivieren statt löschen</h4>
+        <p>Ein Unternehmen wird nie gelöscht, sondern archiviert – mit allen Protokollen und jederzeit wiederherstellbar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rechtliches">
+    <div class="notice">
+      <h4>Rechtliche Hinweise</h4>
+      <p>DiamVAT ist ein Software-Werkzeug zur Prüfung und Aufbereitung von Daten. Es leistet keine Hilfeleistung in Steuersachen im Sinne des Steuerberatungsgesetzes und ersetzt keine steuerliche Beratung. Für die Richtigkeit und Vollständigkeit der erfassten und übermittelten Daten bleibt die Nutzerin oder der Nutzer verantwortlich.</p>
+      <p>ELSTER ist eine Marke des Freistaats Bayern. DiamVAT ist ein unabhängiges Produkt und steht in keiner Verbindung zur Finanzverwaltung; die Nennung dient allein dem Hinweis auf die Eignung zur Verwendung mit ELSTER.</p>
+      <p>Die Übermittlung an die Steuerverwaltung ist in dieser Fassung ausschließlich als Testübermittlung an den Testzugang möglich. Eine Abgabe mit steuerlicher Wirkung – und damit die Wahrung einer Frist – kann DiamVAT in dieser Fassung nicht leisten.</p>
+      <p>Auch eine qualifizierte Bestätigung nach § 18e UStG ist kein Haftungsfreibrief: Sie dokumentiert die Auskunft der Verwaltung zu einem bestimmten Zeitpunkt, mehr nicht. Über die Steuerbefreiung einer Lieferung entscheidet der Sachverhalt, nicht die Abfrage.</p>
+    </div>
+  </section>
+
+  <section id="ehrlich">
+    <div class="honest">
+      <h3>Ehrlich gesagt</h3>
+      <p style="color:var(--ink-soft); margin-top:8px;">DiamVAT ist eine Beta-Fassung. Diese Grenzen hat sie – und wir nennen sie lieber hier, als dass Sie sie später entdecken:</p>
+      <ul>
+        <li>Übermittelt und mit der amtlichen Schnittstelle geprüft wird ausschließlich am Mac; die ERiC-Schnittstelle gibt es für iOS und iPadOS nicht. iPhone und iPad erfassen, rechnen, prüfen vorab und erzeugen Formular-PDFs.</li>
+        <li>In dieser Fassung gibt es ausschließlich Testübermittlungen an den Testzugang der Steuerverwaltung. Eine Abgabe mit steuerlicher Wirkung ist bewusst nicht möglich – Fristen müssen Sie weiterhin auf dem gewohnten Weg wahren.</li>
+        <li>Deutsche USt-IdNrn. laufen über VIES, ohne Firmendaten-Abgleich. Nur die Auskunft des Bundeszentralamts zu ausländischen Nummern kann den Vertrauensschutz nach § 6a Abs. 4 UStG tragen; die App kennzeichnet das überall.</li>
+        <li>Die Prüfung der Steuernummer sagt nur, dass sie formal richtig aufgebaut ist – nicht, dass sie tatsächlich vergeben wurde.</li>
+        <li>Die App entscheidet nicht, ob ein Umsatz meldepflichtig ist – sie kennt den Warenweg nicht. Sie warnt und schlägt vor, entschieden wird von Ihnen.</li>
+        <li>Voranmeldung und Jahreserklärung gibt es für die Jahrgänge 2025 und 2026; der Jahr-Auswähler bietet nur Jahre an, für die die amtliche Prüfbibliothek mitgeliefert ist.</li>
+        <li>Umsatzsteuerliche Organschaft mit konsolidierter Voranmeldung gibt es noch nicht – bis dahin wird jedes Unternehmen einzeln gemeldet.</li>
+        <li>Bei der Zusammenfassenden Meldung fehlen Angaben zur Konsignationslagerregelung (§ 6b UStG); Elma5 und ZM über Elma5 sind bewusst ausgeschlossen.</li>
+        <li>Die Fristenberechnung kennt nur die neun bundesweiten Feiertage; Landesfeiertage bleiben unberücksichtigt, die App nennt in solchen Fällen den bundesweit sicheren Tag.</li>
+        <li>Der Compliance-Verlauf ist kein lückenloses Prüfprotokoll: Gelöschte Entwürfe verschwinden daraus. Die belastbaren Nachweise sind das Prüfarchiv und die Übermittlungsprotokolle.</li>
+        <li>Die Anordnung von Reiterleiste und Seitenleiste gilt für iPhone und iPad; am Mac bleibt die feste Seitenleiste mit allen Bereichen.</li>
+        <li>Die Oberfläche ist auf Deutsch.</li>
+        <li>Vorausgesetzt werden iOS bzw. iPadOS 26 und macOS 26; ältere Geräte werden nicht unterstützt.</li>
+        <li>Die App ist noch nicht im App Store. Es gibt derzeit keinen öffentlichen Testzugang.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-brand"><img src="../../assets/diamapps-logo.svg" alt="">DiamApps</div>
+  <div class="footlinks">
+    <a href="/apps/diamvat/">DiamVAT</a>
+    <a href="/apps/diamlaw/">DiamLaw</a>
+    <a href="/apps/diammath/">DiamMath</a>
+    <a href="/support/">Support</a>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+  </div>
+  <div class="copy">© 2026 DiamApps</div>
+</footer>
+</body>
+</html>

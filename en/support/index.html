@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help and support – DiamApps</title>
+<meta name="description" content="Support for DiamVAT, DiamLaw and DiamMath: system requirements, the questions we are asked most often about backups and iCloud sync, and the details that really help when you report a bug.">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="canonical" href="https://diamapps.com/en/support/">
+<link rel="alternate" hreflang="en" href="https://diamapps.com/en/support/">
+<link rel="alternate" hreflang="de" href="https://diamapps.com/support/">
+<link rel="alternate" hreflang="x-default" href="https://diamapps.com/support/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiamApps">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:url" content="https://diamapps.com/en/support/">
+<meta property="og:title" content="Help and support – DiamApps">
+<meta property="og:description" content="Support for DiamVAT, DiamLaw and DiamMath: system requirements, the questions we are asked most often about backups and iCloud sync, and the details that really help when you report a bug.">
+<meta property="og:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiamApps – diamond logo with the apps DiamVAT, DiamLaw and DiamMath">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Help and support – DiamApps">
+<meta name="twitter:description" content="Support for DiamVAT, DiamLaw and DiamMath: system requirements, the questions we are asked most often about backups and iCloud sync, and the details that really help when you report a bug.">
+<meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta name="theme-color" content="#1E62D0">
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<div class="stage" aria-hidden="true"></div>
+<a class="skip" href="#content">Skip to content</a>
+
+<header>
+  <div class="nav">
+    <a class="brandlink" href="/en/">
+      <img src="../../assets/diamapps-logo.svg" alt="">
+      <div class="brand">Diam<span>Apps</span></div>
+    </a>
+    <nav>
+      <a href="/en/#apps">Apps</a>
+      <a href="/en/studio/">Studio</a>
+      <a href="/en/support/" aria-current="page">Support</a>
+      <a href="/en/contact/">Contact</a>
+      <span class="langswitch">
+        <a href="/support/" hreflang="de">DE</a>
+        <a href="/en/support/" aria-current="true" hreflang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="crumb"><a href="/en/">← Back to the home page</a></div>
+
+  <div class="apphead">
+    <div>
+      <h1>Support</h1>
+      <p class="claim">Help with DiamVAT, DiamLaw and DiamMath.</p>
+      <div class="meta">
+        <span>Last updated: September 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="appintro">
+    <p>This page lists the system requirements for each app and answers the questions we are asked most often – above all about backing up your data and about iCloud sync. If your question is not covered here, please write to us via the <a href="/en/contact/">contact page</a>. DiamApps is a very small studio: you are always writing to a person, just not around the clock.</p>
+  </div>
+
+  <div class="toc">
+    <a href="#diamvat">DiamVAT</a>
+    <a href="#diamlaw">DiamLaw</a>
+    <a href="#diammath">DiamMath</a>
+    <a href="#bugs">Reporting a bug</a>
+  </div>
+
+  <section id="diamvat">
+    <div class="kicker">DiamVAT</div>
+    <h2>Checking, recording and preparing VAT returns</h2>
+    <p class="lead">DiamVAT checks Umsatzsteuer-Identifikationsnummern (German VAT identification numbers) against the register held by the Bundeszentralamt für Steuern (the Federal Central Tax Office). Every check is documented as a PDF, and the app prepares the Zusammenfassende Meldung (EC Sales List), the Umsatzsteuer-Voranmeldung (preliminary VAT return) and the annual VAT return.</p>
+
+    <dl class="specs">
+      <div class="row">
+        <dt>Devices</dt>
+        <dd>iPhone, iPad and Mac – one app from one project.</dd>
+      </div>
+      <div class="row">
+        <dt>System version</dt>
+        <dd>iOS 26, iPadOS 26 or macOS 26 and later. Older systems are not supported.</dd>
+      </div>
+      <div class="row">
+        <dt>Mac only</dt>
+        <dd>The official confirmation check and the transmission to ELSTER (the German tax authorities' online filing system) run through the tax administration's ERiC interface – in this version solely as a test submission to the tax administration’s test system. That interface exists for desktop systems only, which is why these steps are available in the Mac version alone.</dd>
+      </div>
+      <div class="row">
+        <dt>Version</dt>
+        <dd>1.23.3 (beta). The app is still in testing and is not yet on the App Store.</dd>
+      </div>
+    </dl>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>How do I back up my data?</h4>
+        <p>Every check produces a PDF record that you can file and archive; bulk checks additionally give you a summary report and a CSV export. Transmission logs are deliberately immutable: they survive the deletion of a draft and even “Delete all local data”, because proof of a transmission has to be kept. For your day-to-day records, iCloud sync is the way to have your data on more than one device.</p>
+      </div>
+      <div class="mini">
+        <h4>What happens when iCloud sync is switched on?</h4>
+        <p>Your check history, imports, EC Sales List entries, drafts, companies and all settings are kept in step between your devices through your personal iCloud. DiamApps runs no server of its own for this and sees none of it. When you switch sync on, the app says explicitly that sensitive company data travels with it and waits for your consent. Two things deliberately stay on the device: the app icon and the certificate PIN.</p>
+      </div>
+      <div class="mini">
+        <h4>Why can I not file from my iPhone?</h4>
+        <p>Because the official ERiC interface exists for desktop systems only. iPhone and iPad let you record and calculate everything, run the checks in advance and produce the forms as PDFs. The draft then travels to your Mac via iCloud, and that is where transmission takes place – in this version solely as a test submission to the tax administration’s test system.</p>
+      </div>
+      <div class="mini">
+        <h4>Can I already file a legally effective return?</h4>
+        <p>No. The current beta only ever sends to the tax administration's test endpoint; the program contains no path for live transmission at all. Filing with legal effect is therefore deliberately impossible in this version.</p>
+      </div>
+      <div class="mini">
+        <h4>Where do I find instructions?</h4>
+        <p>Under “Help” in the app there are eight step-by-step guides – from the simple and the qualified check through bulk checking to a finished Zusammenfassende Meldung – plus two short screen recordings taken from the app.</p>
+      </div>
+      <div class="mini">
+        <h4>My question is not answered here</h4>
+        <p>Write to us via the <a href="/en/contact/">contact page</a> and please name “DiamVAT” as the app in question. Never send us your ELSTER certificate, a PIN or real tax data – we do not need any of that to track down a problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="diamlaw">
+    <div class="kicker">DiamLaw</div>
+    <h2>Reading legislation and case law</h2>
+    <p class="lead">DiamLaw is a reader for German federal legislation and EU law that works entirely offline – with highlights, notes, dossiers, a study mode and a connection to the case law of the federal courts.</p>
+
+    <dl class="specs">
+      <div class="row">
+        <dt>Devices</dt>
+        <dd>iPhone and iPad.</dd>
+      </div>
+      <div class="row">
+        <dt>System version</dt>
+        <dd>iOS 26 or iPadOS 26 and later.</dd>
+      </div>
+      <div class="row">
+        <dt>Mac</dt>
+        <dd>There is no separate native Mac version. On Macs with Apple silicon you can install the iPad version.</dd>
+      </div>
+      <div class="row">
+        <dt>Version</dt>
+        <dd>0.7.2. The app is still in development and not yet on the App Store.</dd>
+      </div>
+    </dl>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>Do I need an internet connection?</h4>
+        <p>Not for the legislation – it sits complete on your device, including search, highlights and study mode. Only case law needs a connection, because the decisions are fetched from the German federal legal information portal. Once a decision has been opened or saved as an offline copy, it stays readable without a connection.</p>
+      </div>
+      <div class="mini">
+        <h4>How do I back up my data?</h4>
+        <p>The backup writes your data into a local file that you put wherever you like – in the Files app, in iCloud Drive or anywhere else. When you move to a new device, you simply read that same file back in. If you use iCloud sync, you also have the same state on iPhone and iPad.</p>
+      </div>
+      <div class="mini">
+        <h4>What happens when iCloud sync is switched on?</h4>
+        <p>Three separate switches let you decide what travels: content (highlights, notes, favourites, dossiers, offline decisions), appearance and settings, and images. Everything stays in your personal iCloud; DiamApps runs no servers of its own and cannot look at any of it. A status line in the settings shows whether the connection is up.</p>
+      </div>
+      <div class="mini">
+        <h4>How current are the legal texts?</h4>
+        <p>Because the texts deliberately live on your device, new versions arrive with the next app update rather than overnight. The change notice tells you that something has happened to a piece of legislation – it does not yet deliver the new wording. DiamLaw is also not an official edition and is no substitute for legal advice; only the version promulgated in the Bundesgesetzblatt (Federal Law Gazette) is binding.</p>
+      </div>
+      <div class="mini">
+        <h4>Why can I not find my state law?</h4>
+        <p>The app covers federal legislation and selected EU legal acts. State law, administrative regulations, decrees, commentaries and textbooks are expressly not included. Every source that is included can be looked up in the app together with its legal status and the date it was retrieved.</p>
+      </div>
+      <div class="mini">
+        <h4>My question is not answered here</h4>
+        <p>Write to us via the <a href="/en/contact/">contact page</a> and please name “DiamLaw” as the app in question, along with the statute and the provision you mean.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="diammath">
+    <div class="kicker">DiamMath</div>
+    <h2>Plotting functions and doing the maths</h2>
+    <p class="lead">DiamMath plots functions, analyses curves, solves systems of equations and shows surfaces in space. Everything is calculated on the device itself – no account, no internet connection.</p>
+
+    <dl class="specs">
+      <div class="row">
+        <dt>Devices</dt>
+        <dd>iPhone, iPad and Mac. The Mac version adds menu commands and keyboard shortcuts.</dd>
+      </div>
+      <div class="row">
+        <dt>System version</dt>
+        <dd>iOS 26, iPadOS 26 or macOS 26 and later.</dd>
+      </div>
+      <div class="row">
+        <dt>Orientation</dt>
+        <dd>On iPhone the app deliberately runs in portrait only; on iPad and Mac it works in every orientation and window size.</dd>
+      </div>
+      <div class="row">
+        <dt>Version</dt>
+        <dd>0.7.21 (build 49), a development build. The polish for iPad and Mac is still to come, and the app is not yet on the App Store.</dd>
+      </div>
+    </dl>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>How do I back up my worksheets?</h4>
+        <p>Under “Data &amp; backup” in the settings, DiamMath writes everything into a single file: all settings, your profile including its photo, every background image, the quick-start list and every worksheet – even the ones in the bin. If you like, the backup goes straight to iCloud Drive.</p>
+      </div>
+      <div class="mini">
+        <h4>Does importing overwrite my files?</h4>
+        <p>No. When a backup is read in, settings and images are only replaced after you confirm. Worksheets are added under names that are still free and never overwrite an existing file.</p>
+      </div>
+      <div class="mini">
+        <h4>What happens when iCloud sync is switched on?</h4>
+        <p>Worksheets, the quick-start list, background images, your profile and all settings stay the same on iPhone, iPad and Mac – through your personal iCloud, with no third-party servers involved. If two devices change the same thing at once, the most recent change wins for each item individually. The version that loses is kept as a separate copy marked “(conflict …)”, so nothing is lost.</p>
+      </div>
+      <div class="mini">
+        <h4>Why does the app not find the roots of a circle?</h4>
+        <p>With sideways curves and implicit relations such as x² + y² = 25, a single x belongs to two y values. Roots, extrema, the derivative, area calculation, crosshair readings and the value table are therefore deliberately disabled in those cases – any single result would be arbitrary.</p>
+      </div>
+      <div class="mini">
+        <h4>Why does a change of language only take effect later?</h4>
+        <p>Changing the language inside the app takes full effect only after you restart it. Your own content – block titles, worksheet names and notes – is not translated. It keeps the language you wrote it in.</p>
+      </div>
+      <div class="mini">
+        <h4>My question is not answered here</h4>
+        <p>Write to us via the <a href="/en/contact/">contact page</a> and please name “DiamMath” as the app in question. If it concerns a particular calculation, it helps us to have the expression exactly as you typed it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="bugs">
+    <div class="kicker">Reporting a bug</div>
+    <h2>What really helps us when something goes wrong</h2>
+    <p class="lead">The more precise a report is, the better the chance of reproducing the problem – and only what can be reproduced can be fixed. These five details are usually all we need.</p>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>App and version</h4>
+        <p>Which app is affected and which version you are using. You will find the number right at the bottom of the settings under “About” – please include the build number in brackets if one is shown.</p>
+      </div>
+      <div class="mini">
+        <h4>Device and system version</h4>
+        <p>For example “iPhone 17 Pro running iOS 26.1” or “MacBook Air M2 running macOS 26”. You will find both in the system settings under “General” or under “About This Mac”.</p>
+      </div>
+      <div class="mini">
+        <h4>What exactly happened</h4>
+        <p>The route that got you there, step by step: which area did you open, what did you tap, what had you entered? A screenshot often says more than a description.</p>
+      </div>
+      <div class="mini">
+        <h4>What you expected instead</h4>
+        <p>The most important point, and the one most often missing. “The number was wrong” tells us little – “it showed € 12.40, but € 12.04 would be correct” takes us straight to the cause.</p>
+      </div>
+      <div class="mini">
+        <h4>How often it happens</h4>
+        <p>Every time, just once, or only in a particular situation? If you can reproduce the problem on purpose, please tell us how – that is half the solution.</p>
+      </div>
+      <div class="mini">
+        <h4>Where to send it</h4>
+        <p>All of it together via the <a href="/en/contact/">contact page</a>. We will get back to you as soon as we have looked into it.</p>
+      </div>
+    </div>
+
+    <div class="notice">
+      <h4>Please do not send us confidential data</h4>
+      <p>To track down a problem we need no passwords, no PINs, no ELSTER certificate and no real client or tax data. Please redact details of that kind in screenshots before you send them. None of the apps uses an account with us – we have no access to your devices and cannot look anything up there.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-brand"><img src="../../assets/diamapps-logo.svg" alt="">DiamApps</div>
+  <div class="footlinks">
+    <a href="/en/apps/diamvat/">DiamVAT</a>
+    <a href="/en/apps/diamlaw/">DiamLaw</a>
+    <a href="/en/apps/diammath/">DiamMath</a>
+    <a href="/en/support/">Support</a>
+    <a href="/en/imprint/">Legal notice</a>
+    <a href="/en/privacy/">Privacy</a>
+  </div>
+  <div class="copy">© 2026 DiamApps</div>
+</footer>
+</body>
+</html>

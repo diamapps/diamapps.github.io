@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiamMath – Funktionen zeichnen und verstehen</title>
+<meta name="description" content="DiamMath zeichnet Funktionen im maßstabstreuen 2D-Graphen, berechnet Integrale und Kurvendiskussionen, stellt Flächen in 3D dar und löst Gleichungssysteme mit nachvollziehbarem Lösungsweg – nativ für iPhone, iPad und Mac.">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="canonical" href="https://diamapps.com/apps/diammath/">
+<link rel="alternate" hreflang="de" href="https://diamapps.com/apps/diammath/">
+<link rel="alternate" hreflang="en" href="https://diamapps.com/en/apps/diammath/">
+<link rel="alternate" hreflang="x-default" href="https://diamapps.com/apps/diammath/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiamApps">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://diamapps.com/apps/diammath/">
+<meta property="og:title" content="DiamMath – Funktionen zeichnen und verstehen">
+<meta property="og:description" content="DiamMath zeichnet Funktionen im maßstabstreuen 2D-Graphen, berechnet Integrale und Kurvendiskussionen, stellt Flächen in 3D dar und löst Gleichungssysteme mit nachvollziehbarem Lösungsweg.">
+<meta property="og:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiamApps – Diamant-Logo mit den Apps DiamVAT, DiamLaw und DiamMath">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiamMath – Funktionen zeichnen und verstehen">
+<meta name="twitter:description" content="DiamMath zeichnet Funktionen im maßstabstreuen 2D-Graphen, berechnet Integrale und Kurvendiskussionen, stellt Flächen in 3D dar und löst Gleichungssysteme mit nachvollziehbarem Lösungsweg.">
+<meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta name="theme-color" content="#1E62D0">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DiamMath","applicationCategory":"EducationalApplication","operatingSystem":"iOS 26, iPadOS 26, macOS 26","softwareVersion":"0.7.21","inLanguage":["de","en"],"description":"Funktionen zeichnen, Kurven untersuchen, Integrale berechnen, Flächen in 3D darstellen und Gleichungssysteme mit nachvollziehbarem Lösungsweg lösen.","publisher":{"@type":"Organization","name":"DiamApps","url":"https://diamapps.com"}}
+</script>
+</head>
+<body>
+<div class="stage" aria-hidden="true"></div>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav">
+    <a class="brandlink" href="/">
+      <img src="../../assets/diamapps-logo.svg" alt="">
+      <div class="brand">Diam<span>Apps</span></div>
+    </a>
+    <nav>
+      <a href="/#apps" class="navaktiv">Apps</a>
+      <a href="/studio/">Studio</a>
+      <a href="/support/">Support</a>
+      <a href="/kontakt/">Kontakt</a>
+      <span class="langswitch">
+        <a href="/apps/diammath/" aria-current="true" hreflang="de">DE</a>
+        <a href="/en/apps/diammath/" hreflang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <div class="crumb"><a href="/#apps">← Alle Apps</a></div>
+
+  <div class="apphead">
+    <img class="appicon" src="../../assets/diammath.png" alt="DiamMath App-Symbol – Koordinatensystem mit x- und y-Achse in Diamantblau">
+    <div>
+      <h1>DiamMath</h1>
+      <p class="claim">Zeichnen, rechnen, verstehen.</p>
+      <div class="meta">
+        <span class="badge dev">In Entwicklung</span>
+        <span>Stand: September 2026 · Fassung 0.7.21 (Build 49)</span>
+      </div>
+      <div class="meta">
+        <span>iPhone, iPad und Mac mit iOS, iPadOS bzw. macOS 26 · vollständig auf Deutsch und Englisch</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="appintro">
+    <p>DiamMath ist eine Mathematik-App für die Schule, das Studium und alle, die gern selbst nachrechnen. Sie zeichnet Funktionen, untersucht Kurven, löst Gleichungssysteme und stellt Flächen im Raum dar – und erklärt dabei jeden Schritt, statt nur ein Ergebnis hinzuwerfen. Alles rechnet lokal auf dem Gerät, ganz ohne Konto und ohne Internetverbindung.</p>
+  </div>
+
+  <div class="toc">
+    <a href="#start">Startet rechenbereit</a>
+    <a href="#graph">2D-Graph</a>
+    <a href="#kurven">Kurven untersuchen</a>
+    <a href="#gleichungen">Gleichungssysteme</a>
+    <a href="#raum">3D-Graph</a>
+    <a href="#tastatur">Mathe-Tastatur</a>
+    <a href="#blaetter">Arbeitsblätter</a>
+    <a href="#werkstatt">Werkstätten</a>
+    <a href="#design">App Design</a>
+    <a href="#ehrlich">Ehrlich gesagt</a>
+  </div>
+
+  <section id="start">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Kein Leerlauf</div>
+        <h3>Startet rechenbereit</h3>
+        <p>Kein Dateibrowser, kein leeres Blatt: DiamMath öffnet sofort eine benutzbare Arbeitsfläche mit fünf Beispielfunktionen – Parabel, Sinuswelle, Wurzel, Hyperbel und gedämpfte Schwingung. Alle fünf sind bearbeitbar, und jede Änderung wird laufend automatisch gesichert.</p>
+        <ul>
+          <li>Sofort loslegen statt erst ein Dokument anlegen</li>
+          <li>Der Schnellstart bleibt erhalten und wandert per iCloud mit</li>
+          <li>Blöcke in den Kategorien 2D-Funktionen, 3D-Funktionen und Notizen</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-expressions.jpg" width="640" height="1391" loading="lazy"
+             alt="DiamMath auf dem iPhone: der Reiter „Funktionen“ mit fünf Beispielfunktionen im Formelsatz">
+      </div>
+    </div>
+  </section>
+
+  <section id="graph">
+    <div class="feature flip">
+      <div class="feature-text">
+        <div class="eyebrow">2D-Graph</div>
+        <h3>Der Graph, der maßstabstreu bleibt</h3>
+        <p>Gitter, Achsen und Beschriftung laufen zwingend mit dem Ausschnitt mit. Verschieben und Zoomen geschieht mit den Fingern, und die Achsen sind ab Werk gleich skaliert – ein Kreis bleibt deshalb ein Kreis und wird nicht zur Ellipse.</p>
+        <ul>
+          <li>Die Legende setzt jede Kurve als „f(x) = Term“ im echten Formelsatz</li>
+          <li>Acht klar unterscheidbare Kurvenfarben, automatisch vergeben</li>
+          <li>Ein Tipp setzt das Fadenkreuz – die Legende zeigt je Kurve den Wert an dieser Stelle</li>
+          <li>Kommen a oder b in einer Funktion vor, legt die App die Regler selbst an – mit Minimum, Maximum, Schrittweite und einem Abspielknopf</li>
+          <li>Auch implizite Kurven: Kreise, Ellipsen und Hyperbeln, x² + y² = 25 punktgenau</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-graph.jpg" width="640" height="1391" loading="lazy"
+             alt="Der 2D-Graph mit fünf Kurven und der Legende, die jede Funktion im Formelsatz zeigt">
+      </div>
+    </div>
+  </section>
+
+  <section id="kurven">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Analysis</div>
+        <h3>Kurven untersuchen – inklusive Integral</h3>
+        <p>Setzen Sie mit dem Punkt-Werkzeug zwei Punkte auf eine Kurve und tippen Sie auf ∫: DiamMath schraffiert die Fläche und zeigt sie als sauber gesetzte Gleichung mit eingesetzten Grenzen. Liegen die Punkte auf zwei verschiedenen Kurven, wird die eingeschlossene Fläche zwischen beiden berechnet.</p>
+        <ul>
+          <li>Der Flächeninhalt ist immer positiv – gerechnet wird A = ∫|f| dx mit einem adaptiven Simpson-Verfahren, das seine Genauigkeit laufend prüft</li>
+          <li>Nullstellen, lokale Extrema, Schnittpunkte, echte Berührstellen und Wendepunkte über die symbolische zweite Ableitung</li>
+          <li>Erste, zweite und dritte Ableitung als eigener Block in eigener Farbe, mit ′ ″ ‴ in der Legende</li>
+          <li>Schlägt die numerische Rückprobe fehl, sagt die App das offen – statt eine Zahl zu erfinden</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-analysis.jpg" width="640" height="1391" loading="lazy"
+             alt="Der Analysis-Bereich mit den Werkzeugen für Ableitung, Integral, Nullstellen und Grenzwert">
+      </div>
+    </div>
+  </section>
+
+  <section id="gleichungen">
+    <div class="feature flip">
+      <div class="feature-text">
+        <div class="eyebrow">Gleichungen</div>
+        <h3>Systeme mit geprüftem Lösungsweg</h3>
+        <p>Ein eigener Bereich für Gleichungen und Gleichungssysteme mit ein bis drei Unbekannten. Lineare und quadratische Gleichungen werden exakt gelöst – auch mit komplexen Lösungen –, Brüche erscheinen als echte Brüche im Formelsatz.</p>
+        <ul>
+          <li>Der Lösungsweg klappt auf: jeder Schritt trägt seine Regel und einen Prüfstatus</li>
+          <li>Lineare Systeme mit exakter Lösung statt Näherung</li>
+          <li>Ergebnisse lassen sich als Notiz ins Arbeitsblatt übernehmen</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-equations.jpg" width="640" height="1391" loading="lazy"
+             alt="Der Gleichungsbereich mit nummerierten Eingabezeilen für ein Gleichungssystem">
+      </div>
+    </div>
+  </section>
+
+  <section id="raum">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">3D-Graph</div>
+        <h3>In drei Dimensionen</h3>
+        <p>Der 3D-Bereich zeichnet Höhenflächen z = f(x,y) genauso wie implizite Flächen F(x,y,z) = 0 – von der Sattelfläche über Torus und Gyroid bis zur Herzfläche. Fünfzehn Vorlagen liegen als Symbolleiste bereit, ein Tipp rechnet sofort.</p>
+        <ul>
+          <li>Die Szene folgt beim Drehen dem Finger, lässt sich zoomen und zentrieren</li>
+          <li>Ein Drahtgitter-Modus zeigt jede Figur als reines Liniengerüst</li>
+          <li>Vier Qualitätsstufen von schnell bis sehr fein</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-graph3D.jpg" width="640" height="1391" loading="lazy"
+             alt="Der 3D-Graph zeigt eine implizite Herzfläche mit den Achsen x, y und z">
+      </div>
+    </div>
+  </section>
+
+  <section id="tastatur">
+    <div class="feature flip">
+      <div class="feature-text">
+        <div class="eyebrow">Eingabe</div>
+        <h3>Eingeben wie im Heft</h3>
+        <p>Auf iPhone und iPad erscheint in allen Formelfeldern statt der Systemtastatur eine eigene Mathe-Tastatur: x, y, z, die Parameter a und b, π, e, i, Klammern, Wurzel, Potenz und ein Geteiltzeichen, das im Formelsatz zum echten Bruchstrich wird. Eine zweite Seite trägt die Funktionen von sin bis conj.</p>
+        <ul>
+          <li>Was Sie tippen, erscheint live im schönen Formelsatz</li>
+          <li>Integrale mit Grenzen, Matrizen in Klammern, Summen- und Produktzeichen mit Laufindex</li>
+          <li>Wissenschaftlicher Rechner mit Speichertasten, Logarithmen, Fakultät, Grad/Bogenmaß, Verlauf und „ans“</li>
+          <li>Am Mac bleibt die Hardwaretastatur die Eingabe</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../assets/shots/diammath-calculator.jpg" width="640" height="1391" loading="lazy"
+             alt="Der wissenschaftliche Rechner mit Tastenfeld, Speichertasten und Verlauf">
+      </div>
+    </div>
+  </section>
+
+  <section id="blaetter">
+    <div class="kicker">Arbeiten</div>
+    <h2>Arbeitsblätter statt Wegwerf-Rechnungen</h2>
+    <p class="lead">DiamMath hat ein eigenes Dateiformat. Was Sie rechnen, bleibt erhalten – und lässt sich weitergeben.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Eigene Ablage</h4>
+        <p>Umbenennen, duplizieren, weich löschen – der Papierkorb stellt Arbeitsblätter, Blöcke und Parameter gemeinsam wieder her. Gesichert wird automatisch.</p>
+      </div>
+      <div class="mini">
+        <h4>Von außen öffnen</h4>
+        <p>Ein Tipp auf eine <code>.diammath</code>-Datei in der Dateien-App, in Mail oder in einer Nachricht genügt. So wandern Arbeitsblätter von der Lehrkraft in die Klasse.</p>
+      </div>
+      <div class="mini">
+        <h4>Exportieren</h4>
+        <p>Wertetabelle als CSV, Graph als PNG oder als echtes Vektor-PDF – alles rein lokal, ohne Umweg über einen Server.</p>
+      </div>
+      <div class="mini">
+        <h4>Notiz-Blöcke</h4>
+        <p>Text mit eigenem Titel als vollwertige dritte Blockart – aus einem Arbeitsblatt wird so eine erklärte Lösung.</p>
+      </div>
+      <div class="mini">
+        <h4>Grad oder Bogenmaß</h4>
+        <p>Der Winkelmodus gehört zum Arbeitsblatt, nicht zur App – jedes Dokument behält seine Einstellung.</p>
+      </div>
+      <div class="mini">
+        <h4>Sicherung</h4>
+        <p>Export und Import als Datei oder über iCloud Drive. Eine Sicherung löscht niemals vorhandene Dateien: Arbeitsmappen kommen unter freien Namen hinzu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="werkstatt">
+    <div class="kicker">Werkstätten</div>
+    <h2>Weit über das Zeichnen hinaus</h2>
+    <p class="lead">Zwei Werkstätten bündeln Werkzeuge, die sonst eigene Apps bräuchten – und jedes davon schreibt sein Ergebnis auf Wunsch ins Arbeitsblatt zurück.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Visualisierung</h4>
+        <p>Polarkurven, Parameterkurven, implizite Kurven und ebene Geometrie mit eindeutig klassifizierten Schnittmengen. Definitionslücken werden nie stillschweigend überbrückt.</p>
+      </div>
+      <div class="mini">
+        <h4>Lineare Algebra</h4>
+        <p>Vektoren und Matrizen bis 10 × 10 mit Determinante, Inverser, Transponierter und linearen Systemen – dazu die komplexe Ebene.</p>
+      </div>
+      <div class="mini">
+        <h4>Folgen, Statistik, Einheiten</h4>
+        <p>Folgen und Reihen, deskriptive Statistik mit linearer Regression und ein Einheitenrechner über 13 Größenarten.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="kicker">App Design</div>
+    <h2>So, wie Sie es mögen</h2>
+    <p class="lead">DiamMath teilt die Gestaltungsschicht aller DiamApps – und geht dabei bis in die Mathe-Tastatur.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Eigene Hintergrundbilder</h4>
+        <p>Funktionen, 2D-Graph, Rechner, Analysis und Gleichungssystem können je ein eigenes Bild aus Ihrer Fotomediathek tragen, mit stufenloser Deckkraft. Der 3D-Graph behält bewusst seine dunkle Bühne, weil sie die Tiefenwirkung trägt.</p>
+      </div>
+      <div class="mini">
+        <h4>Sieben Akzentfarben</h4>
+        <p>Vom Standard-Tiefblau über Gold, Waldgrün, Bordeaux, Petrol und Aubergine bis Graphit – die Farbe färbt Knöpfe, Auswahl und die Operatoren der Mathe-Tastatur.</p>
+      </div>
+      <div class="mini">
+        <h4>24 App-Symbole</h4>
+        <p>Zwei Motivserien in sechs Edelsteinfarben, jede als Tag- und als Nachtfassung. Hell, dunkel oder dem System folgend – und die Sprache unabhängig davon.</p>
+      </div>
+      <div class="mini">
+        <h4>Navigation nach Ihrem Kopf</h4>
+        <p>Sechs Bereiche frei sortierbar: die ersten vier bilden die Leiste, der Rest bleibt über die Seitenleiste erreichbar.</p>
+      </div>
+      <div class="mini">
+        <h4>Graph-Voreinstellungen</h4>
+        <p>Standard-Ausschnitt, Achsen und Gitternetz; für 3D zusätzlich Flächentyp, Suchbereich und vier Qualitätsstufen.</p>
+      </div>
+      <div class="mini">
+        <h4>Kurvenfarbe je Block</h4>
+        <p>Acht klar unterscheidbare Töne, frei wählbar – und Farbe ist nie das einzige Merkmal, die Legende benennt jede Kurve zusätzlich.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="zugang">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Barrierefreiheit</div>
+        <h3>Für alle bedienbar</h3>
+        <p>Jede gesetzte Formel trägt einen eigens erzeugten Sprechtext – aus f′(x) wird „f Strich von x gleich …“, aus einem Summenzeichen „Summe von n gleich 1 bis 10“. Jede Kurve nennt Farbe und Name, die 3D-Szene beschreibt sich selbst.</p>
+      </div>
+      <div class="feature-text">
+        <div class="eyebrow">Ohne Konto, ohne Server</div>
+        <h3>Ihre Daten bleiben Ihre</h3>
+        <p>Alle Berechnungen laufen lokal. Kein Konto, kein Tracking, keine Werbung, keine Netzverbindung für Arbeitsblätter, Berechnungen oder Exporte. Schalten Sie den iCloud-Abgleich ein, bleiben Arbeitsblätter, Schnellstart, Hintergrundbilder, Profil und Einstellungen auf iPhone, iPad und Mac gleich – über Ihre persönliche iCloud, ohne fremde Server. Ändern zwei Geräte dasselbe Arbeitsblatt gleichzeitig, gewinnt die neueste Fassung, und die unterlegene bleibt als eigene Kopie „(Konflikt …)“ in der Ablage liegen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ehrlich">
+    <div class="honest">
+      <h3>Ehrlich gesagt</h3>
+      <p style="color:var(--ink-soft); margin-top:8px;">DiamMath ist in Entwicklung. Diese Grenzen hat die aktuelle Fassung – und wir nennen sie lieber hier, als dass Sie sie später entdecken:</p>
+      <ul>
+        <li>Integrale werden numerisch berechnet, nicht symbolisch – es gibt keine Stammfunktion als Term.</li>
+        <li>Sehr eng beieinanderliegende doppelte Nullstellen können bei der Kurvendiskussion zusammenfallen.</li>
+        <li>Die ebene Geometrie arbeitet ohne Constraint-Graph: Punkte sind gesetzt, nicht aneinander gebunden.</li>
+        <li>Die 3D-Werkstatt ist ausdrücklich ein Prototyp zum Ausprobieren.</li>
+        <li>Die App ist noch nicht im App Store. Es gibt derzeit keinen öffentlichen Testzugang.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-brand"><img src="../../assets/diamapps-logo.svg" alt="">DiamApps</div>
+  <div class="footlinks">
+    <a href="/apps/diamvat/">DiamVAT</a>
+    <a href="/apps/diamlaw/">DiamLaw</a>
+    <a href="/apps/diammath/">DiamMath</a>
+    <a href="/support/">Support</a>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+  </div>
+  <div class="copy">© 2026 DiamApps</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiamVAT – check VAT numbers, prove it, report it</title>
+<meta name="description" content="Check VAT numbers via BZSt and VIES, document every check as a PDF and prepare ELSTER returns on the Mac – in this version solely as a test submission to the tax administration’s test system.">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="canonical" href="https://diamapps.com/en/apps/diamvat/">
+<link rel="alternate" hreflang="de" href="https://diamapps.com/apps/diamvat/">
+<link rel="alternate" hreflang="en" href="https://diamapps.com/en/apps/diamvat/">
+<link rel="alternate" hreflang="x-default" href="https://diamapps.com/apps/diamvat/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiamApps">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:url" content="https://diamapps.com/en/apps/diamvat/">
+<meta property="og:title" content="DiamVAT – check VAT numbers, prove it, report it">
+<meta property="og:description" content="Check VAT numbers via BZSt and VIES, document every check as a PDF and prepare ELSTER returns on the Mac – in this version solely as a test submission to the tax administration’s test system.">
+<meta property="og:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiamApps – diamond logo with the apps DiamVAT, DiamLaw and DiamMath">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiamVAT – check VAT numbers, prove it, report it">
+<meta name="twitter:description" content="Check VAT numbers via BZSt and VIES, document every check as a PDF and prepare ELSTER returns on the Mac – in this version solely as a test submission to the tax administration’s test system.">
+<meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta name="theme-color" content="#1E62D0">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DiamVAT","applicationCategory":"FinanceApplication","operatingSystem":"iOS 26, iPadOS 26, macOS 26","softwareVersion":"1.23.3","inLanguage":["de"],"description":"Check VAT numbers via BZSt and VIES, document every check as a PDF and prepare ELSTER returns on the Mac – in this version solely as a test submission to the tax administration’s test system.","publisher":{"@type":"Organization","name":"DiamApps","url":"https://diamapps.com"}}
+</script>
+</head>
+<body>
+<div class="stage" aria-hidden="true"></div>
+<a class="skip" href="#content">Skip to content</a>
+
+<header>
+  <div class="nav">
+    <a class="brandlink" href="/en/">
+      <img src="../../../assets/diamapps-logo.svg" alt="">
+      <div class="brand">Diam<span>Apps</span></div>
+    </a>
+    <nav>
+      <a href="/en/#apps" class="navaktiv">Apps</a>
+      <a href="/en/studio/">Studio</a>
+      <a href="/en/support/">Support</a>
+      <a href="/en/contact/">Contact</a>
+      <span class="langswitch">
+        <a href="/apps/diamvat/" hreflang="de">DE</a>
+        <a href="/en/apps/diamvat/" aria-current="true" hreflang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="crumb"><a href="/en/#apps">← All apps</a></div>
+
+  <div class="apphead">
+    <img class="appicon" src="../../../assets/diamvat.png" alt="DiamVAT app icon – VAT in a circle of stars, diamond blue">
+    <div>
+      <h1>DiamVAT</h1>
+      <p class="claim">Check VAT numbers, prove it, report it.</p>
+      <div class="meta">
+        <span class="badge dev">Beta</span>
+        <span>As of September 2026 · Version 1.23.3 (build 7)</span>
+      </div>
+      <div class="meta">
+        <span>iPhone and iPad running iOS or iPadOS 26, Mac running macOS 26 · Interface in German</span>
+      </div>
+      <div class="meta">
+        <span>ELSTER submission is available on the Mac only – and in this version solely as a test submission to the tax administration’s test system.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="appintro">
+    <p>DiamVAT is the native German VAT app for iPhone, iPad and Mac. It checks USt-IdNrn. (VAT identification numbers) through the official interfaces of the Bundeszentralamt für Steuern (BZSt, the German Federal Central Tax Office) and the EU database VIES. Every check is documented as an archivable PDF record. The Zusammenfassende Meldung (EC Sales List), Umsatzsteuer-Voranmeldung (advance VAT return), Dauerfristverlängerung (permanent filing extension) and Jahreserklärung (annual VAT return) are prepared right up to the ELSTER submission on the Mac – in this version solely as a test submission to the tax administration’s test system. Written for sole traders, small businesses, qualified agents and tax advisers.</p>
+  </div>
+
+  <div class="toc">
+    <a href="#check">Checking a VAT number</a>
+    <a href="#record">The record</a>
+    <a href="#batch">Batch checking</a>
+    <a href="#returns">Preparing returns</a>
+    <a href="#elster">ELSTER on the Mac</a>
+    <a href="#companies">Several companies</a>
+    <a href="#design">App design</a>
+    <a href="#data">Your data</a>
+    <a href="#details">More detail</a>
+    <a href="#legal">Legal notes</a>
+    <a href="#honest">Honestly</a>
+  </div>
+
+  <section id="check">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">VAT number check</div>
+        <h3>Check it, don't guess it</h3>
+        <p>DiamVAT queries your EU business partner's USt-IdNr. through the official interface of the Bundeszentralamt für Steuern under section 18e no. 1 UStG (the German VAT Act) – simple or qualified. The answer arrives within seconds, in plain language, and carries the official time of the request rather than your device's clock. German numbers are not answered by the BZSt at all. Those go through VIES at the European Commission and are visibly labelled as a VIES confirmation that is not official.</p>
+        <ul>
+          <li>Qualified confirmation: company name and address are assessed field by field – matches, differs, was not asked for, or was not supplied by the member state.</li>
+          <li>That field-level comparison is the usual evidence of commercial diligence for the good-faith protection under section 6a(4) UStG. DiamVAT does not merely display it; it writes the whole of it into the PDF record.</li>
+          <li>An attempt that was cancelled or failed for technical reasons never ends up in the record as “invalid”. Every failure gets its own status code (offline, cancelled, network or server error).</li>
+          <li>Paste a number from text or read it off a photo of an invoice. Text recognition runs entirely on the device, and the image is never stored.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="record">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Evidence</div>
+        <h3>The record that counts with the tax office</h3>
+        <p>Every check produces a PDF record containing everything an auditor wants to see: your own and the checked USt-IdNr., the official time of the check, the type of check, the result, the technical status code and the request ID. Batch runs get a multi-page report. It includes a separate section for every row that was never queried at all, with the reason spelled out. That way the arithmetic adds up: imported = documented + not checked.</p>
+        <ul>
+          <li>The check archive can be filtered by status and searched by number, company name and reference; one tap opens the stored individual record.</li>
+          <li>Export as a multi-page PDF report and as CSV for reconciliation with your bookkeeping.</li>
+          <li>The app never deletes anything of its own accord and has no automatic clear-out of old checks (sections 147 AO and 14b UStG). Deleting stays expressly your decision.</li>
+          <li>The check records are archivable. Audit-proof in the strict sense are only the submission records, which survive even a “delete all local data”.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="batch">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Batch checking</div>
+        <h3>Hundreds in one go</h3>
+        <p>Hand over the export from your bookkeeping as a CSV, text or Excel file. DiamVAT recognises the columns and proposes the mapping – nothing is imported automatically, you confirm the preview. The check then works through the rows one by one, deliberately one request at a time rather than in parallel, because parallel requests over a mobile connection returned false “invalid” answers in field testing.</p>
+        <ul>
+          <li>Every “invalid” is automatically checked a second time before it is allowed to stand in the record.</li>
+          <li>Progress is visible, and each row carries its own result.</li>
+          <li>Rows that were not queried do not simply disappear: they appear in the report with the reason why.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="returns">
+    <div class="kicker">Returns</div>
+    <h2>Prepare your returns, down to the individual code</h2>
+    <p class="lead">The Zusammenfassende Meldung, Umsatzsteuer-Voranmeldung, Dauerfristverlängerung and Jahreserklärung all follow the official forms. The maths happens in the app, not on a scrap of paper beside it.</p>
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Zusammenfassende Meldung</div>
+        <h3>With the country rules of section 18a UStG built in</h3>
+        <p>Enter reporting lines or take them from an import – DiamVAT knows the rules. German numbers do not belong in the Zusammenfassende Meldung, nor do non-EU numbers, and Northern Ireland (XI) counts for goods only. Lines that do not qualify are never deleted. They are visibly marked as “do not report” and can be brought back at any time. At the end you get a CSV in the ELSTER import format.</p>
+        <ul>
+          <li>The year grid shows the quarters with their three months alongside and the calendar year below; the rare two-month supplementary periods can be shown when you need them – 21 official reporting periods in all.</li>
+          <li>What you may already file is tappable; what is still running carries a clock; what has not yet begun carries a padlock and, when tapped, the reason.</li>
+          <li>The deadline – the 25th day after the period ends – sits right beside it, together with the reminder that a Dauerfristverlängerung does not apply to the Zusammenfassende Meldung.</li>
+          <li>First and amended returns, monthly reporting under section 18a(1) sentence 2 with its coupling check, and the €50,000 threshold are all covered.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Umsatzsteuer-Voranmeldung</div>
+        <h3>On the official form USt 1 A</h3>
+        <p>The advance return follows the official form, with all 50 codes across eleven sections – each with its official number and an explanation. DiamVAT does the tax itself: the tax amount appears immediately below each taxable amount, the remaining prepayment always stays at the top, and the full calculation can be opened. Whenever you like, you can view the completed return as a three-page PDF of the official form.</p>
+        <ul>
+          <li>Checking starts as you type. Does the tax match the rate? Is the taxable amount missing for a tax figure? Is an amount negative where the authorities require none?</li>
+          <li>For intra-community acquisitions and reverse-charge services under section 13b, the app proposes the corresponding input tax – as a suggestion you can overwrite; after that the automation never touches your entry again.</li>
+          <li>Each tax year gets what is officially provided for it – code 23 up to 2025, for instance, and code 500 from 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <div class="mini">
+        <h4>Dauerfristverlängerung</h4>
+        <p>The application on the official form USt 1 H (sections 46–48 UStDV) has an area of its own. Quarterly filers submit the plain application; for monthly filers the app works out the special prepayment – one eleventh, rounded down.</p>
+      </div>
+      <div class="mini">
+        <h4>Jahreserklärung</h4>
+        <p>Form USt 2 A with all sections A to K for the 2025 and 2026 tax years, plus schedule UN and schedule FV for fiscal representatives. As a PDF of the official form: six pages of the main form, with each schedule in use on a page of its own.</p>
+      </div>
+      <div class="mini">
+        <h4>Carry over the advance returns</h4>
+        <p>If you wish, the year's figures from your draft advance returns move into the annual return – with a per-line preview before anything is written. Codes with no unambiguous target are expressly flagged as manual work.</p>
+      </div>
+      <div class="mini">
+        <h4>The small-business scheme, section 19 UStG</h4>
+        <p>If you report turnover under section 19(1) UStG, a whole set of fields must stay empty. DiamVAT applies eight official rules for this and the €100,000 threshold – as pure value logic, so it works on iPhone and iPad without a Mac.</p>
+      </div>
+      <div class="mini">
+        <h4>Objections in plain language</h4>
+        <p>Every objection raised by the check becomes a card of its own, with its weight, the point it concerns and the official wording. One tap jumps straight to the section of the form, to the company data or to the period.</p>
+      </div>
+      <div class="mini">
+        <h4>Your own EC Sales List import</h4>
+        <p>The Zusammenfassende Meldung has a second import route that you set up once for your bookkeeping's column names and service-type codes. The preview deliberately shows faulty rows too, so that a data-entry error cannot quietly vanish.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="elster">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">On the Mac</div>
+        <h3>To ELSTER on the Mac – in test mode</h3>
+        <p>The Mac app links the tax administration's official ERiC interface (version 44.2.4.0). Its built-in check raises objections to your return in exactly the words the acceptance server would later use, without any network contact at all. <strong>Important, and said plainly:</strong> in this version transmission goes solely to the tax administration’s test system – filing with legal effect is deliberately not possible. All four types of return have in fact been transmitted this way to the test system and accepted there.</p>
+        <ul>
+          <li>Before sending, the app reads back the string that will actually be transmitted and asks you to type a confirmation word.</li>
+          <li>The ELSTER certificate (.pfx) is checked for authenticity and PIN as you store it, and the holder and validity are displayed. The PIN stays on that device behind Face ID or Touch ID; the certificate file itself deliberately travels through the iCloud keychain.</li>
+          <li>Every accepted submission files a record: date of sending, recipient, period, certificate, manufacturer ID, transfer ticket, the figures from the XML that was sent, and the server's reply – as a PDF. It survives deleting the draft just as it survives “delete all local data”.</li>
+          <li>The tax administration's legal notes – the document on Articles 12 to 14 GDPR, the data protection notice verbatim, the note that log files stay on your device, and the recommendation to keep backups – are shown and acknowledged before first use, with the date and document version, and remain available at any time.</li>
+          <li>For the Wirtschafts-Identifikationsnummer (the German business identification number), the app automatically strips off the five-digit distinguishing feature, because the official fields accept only DE plus nine digits.</li>
+        </ul>
+      </div>
+    </div>
+
+    <dl class="specs">
+      <div class="row">
+        <dt>iPhone and iPad</dt>
+        <dd>iOS or iPadOS 26: enter, calculate, pre-check and produce PDFs of the official forms. Drafts travel to the Mac through iCloud.</dd>
+      </div>
+      <div class="row">
+        <dt>Mac</dt>
+        <dd>macOS 26: additionally the official check and the transmission – in this version solely as a test submission to the tax administration’s test system.</dd>
+      </div>
+      <div class="row">
+        <dt>Why the Mac only</dt>
+        <dd>The tax administration's ERiC interface exists for desktop systems only; it is not offered for iOS or iPadOS.</dd>
+      </div>
+      <div class="row">
+        <dt>What you need to bring</dt>
+        <dd>Your own ELSTER certificate (.pfx) and its PIN. The manufacturer ID is built into the product, so there is nothing for you to enter.</dd>
+      </div>
+      <div class="row">
+        <dt>Language</dt>
+        <dd>The interface is in German.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="companies">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Clients</div>
+        <h3>Several companies, one overview</h3>
+        <p>Create as many companies as you need, each with its own USt-IdNr., tax number, legal form, short name and notes. The active company determines what the app shows: check history, imports, EC Sales List rows, advance returns and annual returns always belong to it. You switch at the top of the dashboard or in the sidebar.</p>
+        <ul>
+          <li>The dashboard is the first thing you see: seven figure tiles, quick actions, open notes, the most recent checks and imports, and the state of the Zusammenfassende Meldung. “Officially checked” deliberately excludes the VIES answers.</li>
+          <li>The tiles are built from count queries, so the view opens just as quickly with 5,000 records in the archive as with 500.</li>
+          <li>You type the tax number exactly as it appears on your assessment; DiamVAT converts it into the 13-digit ELSTER format – confirmed for all 16 federal states. The app also names the tax office, drawing on the official directory of 746 offices.</li>
+          <li>The same USt-IdNr. on two companies is reported as an error and blocks submission: two companies cannot file under one VAT number.</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img src="../../../assets/shots/diamvat-dashboard.jpg" width="640" height="1391" loading="lazy"
+             alt="The DiamVAT dashboard showing overall status, checked VAT numbers, EC Sales List rows, the advance return and ELSTER test submissions">
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="kicker">App design</div>
+    <h2>The way you like it</h2>
+    <p class="lead">DiamVAT shares the design layer of all DiamApps – and the result badges stay fully legible throughout.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Backgrounds</h4>
+        <p>Six deliberately understated backgrounds ship with the app – misty blue, diamond, paper, graphite, sage, horizon – or use a photo of your own. Apply one to every area at once, or give the dashboard, checking, EC Sales List and ELSTER areas their own, each with its own opacity slider (0.25 by default).</p>
+      </div>
+      <div class="mini">
+        <h4>Type per area</h4>
+        <p>Six typefaces, from San Francisco through New York and Charter to Georgia and Palatino, plus title and body size – adjustable per area, with a live preview.</p>
+      </div>
+      <div class="mini">
+        <h4>Colours and cards</h4>
+        <p>Seven accent colours from deep blue to graphite, seven card tints, a transparency slider, text opacity and a corner radius from crisp to round – the preview above them changes as you go.</p>
+      </div>
+      <div class="mini">
+        <h4>Light, dark or system</h4>
+        <p>Appearance follows the system or stays fixed. Result badges and forms remain fully legible throughout, however transparent you like it.</p>
+      </div>
+      <div class="mini">
+        <h4>Six app icons</h4>
+        <p>Diamond, ruby, sapphire, emerald, gold or silver – all generated pixel for pixel from the same artwork, with only the gemstone colour changing. The choice deliberately stays a setting of that one device.</p>
+      </div>
+      <div class="mini">
+        <h4>Arrange everything</h4>
+        <p>Which cards sit on the dashboard, which two to five areas occupy the tab bar, how the sidebar is structured – right down to the order of the four draft cards in the ELSTER hub. Areas you take out remain reachable from the sidebar, and every arrangement travels with you through iCloud.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="data">
+    <div class="kicker">Privacy</div>
+    <h2>Your data stays yours</h2>
+    <p class="lead">Check history, imports, EC Sales List rows, drafts, companies and your design and navigation settings sync between your devices through your own private iCloud account – encrypted at Apple, without a single server of ours. Import a file on the Mac, start the check on the iPhone: the same state everywhere.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Consent before syncing</h4>
+        <p>When you switch it on, the app states plainly that sensitive company data travels too, and waits for your consent. The change takes effect after you restart the app.</p>
+      </div>
+      <div class="mini">
+        <h4>Deliberately device-local</h4>
+        <p>Left behind: the app icon, the certificate PIN, the active company and the selected reporting period – a period arriving from another device would silently relabel work in progress.</p>
+      </div>
+      <div class="mini">
+        <h4>Diagnostics without disclosure</h4>
+        <p>The local diagnostic log shows status, response code, duration and transport errors. Sharing has a route of its own that masks the VAT numbers – intended for professionals bound by confidentiality under section 203 StGB (the German Criminal Code).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="kicker">Smaller points</div>
+    <h2>More detail</h2>
+    <p class="lead">Small things that make the difference day to day.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>Compliance timeline</h4>
+        <p>Checks, imports, draft EC Sales Lists and advance returns, and every accepted test submission come together in one timeline, with filters and search. The timeline is a working overview – the records you can rely on remain the check archive and the submission records.</p>
+      </div>
+      <div class="mini">
+        <h4>One job, one entry</h4>
+        <p>A batch check appears in the timeline as a single job with accurate counters; one tap opens the stored individual record.</p>
+      </div>
+      <div class="mini">
+        <h4>CSV, properly built</h4>
+        <p>The CSV export follows RFC 4180 – separators, quotation marks and line breaks inside fields are handled correctly, so your bookkeeping reads the file without any rework.</p>
+      </div>
+      <div class="mini">
+        <h4>Guides and two recordings</h4>
+        <p>Eight step-by-step guides, from a simple check to a finished EC Sales List, including the question of which reporting period actually applies to you. Alongside them, two genuine screen recordings from the app, each under a minute, with no autoplay and no network connection.</p>
+      </div>
+      <div class="mini">
+        <h4>Sample data for demonstrations</h4>
+        <p>The dashboard, timeline, import and EC Sales List can be viewed with sample data instead of real client data – reachable only through Settings and Developer, so that sample data can never mix in among real checks.</p>
+      </div>
+      <div class="mini">
+        <h4>On the large screen</h4>
+        <p>The Mac has a proper system sidebar with real content targets rather than pages to leaf through. On iPad and Mac, the advance return and the annual return put the sections on the left and the form on the right.</p>
+      </div>
+      <div class="mini">
+        <h4>One certificate per company</h4>
+        <p>All four types of return work with the same active certificate; each company can additionally have a preferred certificate on file.</p>
+      </div>
+      <div class="mini">
+        <h4>EC Sales List drafts as snapshots</h4>
+        <p>A draft freezes the aggregated lines as they stood when it was created, so several states of one quarter can exist side by side.</p>
+      </div>
+      <div class="mini">
+        <h4>Archive rather than delete</h4>
+        <p>A company is never deleted, only archived – with all its records, and restorable at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal">
+    <div class="notice">
+      <h4>Legal notes</h4>
+      <p>DiamVAT is a software tool for checking and preparing data. It does not provide assistance in tax matters within the meaning of the German Tax Advisory Act (Steuerberatungsgesetz) and is no substitute for tax advice. Responsibility for the accuracy and completeness of the data entered and transmitted remains with the user.</p>
+      <p>ELSTER is a trademark of the Free State of Bavaria. DiamVAT is an independent product with no connection to the German tax administration; ELSTER is named solely to indicate suitability for use with it.</p>
+      <p>In this build, transmission to the tax administration is possible only as a test submission to the test system. DiamVAT cannot, in this version file a return with legal effect and therefore cannot meet a filing deadline for you.</p>
+      <p>A qualified confirmation under section 18e UStG is no blanket protection from liability either: it documents the authority's answer at a particular point in time, no more than that. Whether a supply is exempt is decided by the facts, not by the query.</p>
+      <p>This English page is a translation provided for convenience. In case of doubt, the German version of this page prevails; the statutory provisions cited apply as worded in German law.</p>
+    </div>
+  </section>
+
+  <section id="honest">
+    <div class="honest">
+      <h3>Honestly</h3>
+      <p style="color:var(--ink-soft); margin-top:8px;">DiamVAT is a beta. These are its limits – and we would rather name them here than have you discover them later:</p>
+      <ul>
+        <li>Transmission and the official check happen on the Mac only; the ERiC interface does not exist for iOS or iPadOS. iPhone and iPad enter, calculate, pre-check and produce PDFs of the official forms.</li>
+        <li>This build performs test submissions to the tax administration's test system only. Filing with legal effect is deliberately not possible – you must still meet your deadlines the way you do today.</li>
+        <li>German USt-IdNrn. go through VIES, without a company data comparison. Only the BZSt's answer on non-German numbers can support the good-faith protection under section 6a(4) UStG, and the app labels this everywhere.</li>
+        <li>Checking a tax number only tells you that it is formally well-formed – not that it was actually issued.</li>
+        <li>The app does not decide whether a transaction is reportable; it does not know the route the goods took. It warns and suggests, and you decide.</li>
+        <li>The advance return and the annual return are available for the 2025 and 2026 tax years; the year picker offers only years for which the official checking library ships with the app.</li>
+        <li>VAT groups (Organschaft) with a consolidated advance return are not yet supported – until then, each company files on its own.</li>
+        <li>The Zusammenfassende Meldung has no entries for the call-off stock arrangement (section 6b UStG); Elma5, and the EC Sales List via Elma5, are deliberately excluded.</li>
+        <li>Deadline calculation knows only the nine nationwide public holidays; state holidays are not taken into account, and in such cases the app names the day that is safe nationwide.</li>
+        <li>The compliance timeline is not a gapless audit trail: deleted drafts disappear from it. The records you can rely on are the check archive and the submission records.</li>
+        <li>Arranging the tab bar and sidebar applies to iPhone and iPad; on the Mac the fixed sidebar with all areas remains.</li>
+        <li>The interface is in German.</li>
+        <li>iOS or iPadOS 26 and macOS 26 are required; older devices are not supported.</li>
+        <li>The app is not yet in the App Store. There is currently no public test access.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-brand"><img src="../../../assets/diamapps-logo.svg" alt="">DiamApps</div>
+  <div class="footlinks">
+    <a href="/en/apps/diamvat/">DiamVAT</a>
+    <a href="/en/apps/diamlaw/">DiamLaw</a>
+    <a href="/en/apps/diammath/">DiamMath</a>
+    <a href="/en/support/">Support</a>
+    <a href="/en/imprint/">Legal notice</a>
+    <a href="/en/privacy/">Privacy</a>
+  </div>
+  <div class="copy">© 2026 DiamApps</div>
+</footer>
+</body>
+</html>

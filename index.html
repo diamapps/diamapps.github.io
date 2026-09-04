@@ -3,271 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DiamApps – Apps by Mario Onar</title>
-<meta name="description" content="DiamApps ist das unabhängige App-Studio von Mario Onar. Native Apps für iPhone, iPad und Mac – präzise entwickelt, elegant gestaltet, Datenschutz zuerst.">
+<title>DiamApps – Native Apps für iPhone, iPad und Mac</title>
+<meta name="description" content="DiamApps ist ein unabhängiges App-Studio: DiamVAT für die Umsatzsteuer, DiamLaw für Gesetze und Rechtsprechung, DiamMath für Mathematik. Nativ, offline, ohne Konto.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<style>
-  :root {
-    --blue: #1E62D0;
-    --blue-soft: #3D8BFD;
-    --ink: #0F1E33;
-    --ink-soft: #4A5A72;
-    --line: rgba(30, 98, 208, 0.12);
-    --card: rgba(255, 255, 255, 0.72);
-    --radius: 26px;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: #FFFFFF;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  /* Dezente blaue Lichtflächen im Hintergrund – Liquid-Glass-Bühne */
-  .stage {
-    position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    background:
-      radial-gradient(640px 420px at 12% -6%, rgba(61, 139, 253, 0.14), transparent 70%),
-      radial-gradient(720px 480px at 96% 12%, rgba(30, 98, 208, 0.10), transparent 70%),
-      radial-gradient(900px 600px at 50% 118%, rgba(140, 195, 255, 0.16), transparent 72%),
-      #FFFFFF;
-  }
-
-  /* ---------- Navigation ---------- */
-  header {
-    position: sticky; top: 0; z-index: 10;
-    backdrop-filter: blur(18px) saturate(1.4);
-    -webkit-backdrop-filter: blur(18px) saturate(1.4);
-    background: rgba(255, 255, 255, 0.65);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav {
-    max-width: 1060px; margin: 0 auto; padding: 14px 24px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .nav img { width: 34px; height: 34px; }
-  .nav .brand { font-size: 1.18rem; font-weight: 700; letter-spacing: -0.02em; }
-  .nav .brand span { color: var(--blue); }
-  .nav nav { margin-left: auto; display: flex; gap: 22px; }
-  .nav nav a {
-    color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500;
-  }
-  .nav nav a:hover { color: var(--blue); }
-  @media (max-width: 430px) {
-    .nav { padding: 12px 16px; gap: 9px; }
-    .nav nav { gap: 13px; }
-    .nav nav a { font-size: 0.88rem; }
-    .nav .brand { font-size: 1.06rem; }
-  }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    max-width: 1060px; margin: 0 auto; padding: 84px 24px 64px;
-    text-align: center;
-  }
-  .hero img.logo {
-    width: 190px; height: 190px;
-    animation: floaty 7s ease-in-out infinite;
-  }
-  @keyframes floaty {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero img.logo { animation: none; }
-  }
-  .hero h1 {
-    font-size: clamp(2.6rem, 7vw, 4.2rem);
-    font-weight: 800; letter-spacing: -0.035em;
-    margin-top: 18px;
-    background: linear-gradient(120deg, var(--ink) 30%, var(--blue) 85%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-  }
-  .hero .by {
-    font-size: 1.08rem; color: var(--ink-soft); font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase; margin-top: 6px;
-  }
-  .hero p.tag {
-    max-width: 560px; margin: 22px auto 0;
-    font-size: 1.2rem; color: var(--ink-soft);
-  }
-  .hero .cta {
-    display: inline-block; margin-top: 34px;
-    padding: 14px 34px; border-radius: 999px;
-    background: linear-gradient(135deg, var(--blue-soft), var(--blue));
-    color: #fff; text-decoration: none; font-weight: 600; font-size: 1.02rem;
-    box-shadow: 0 12px 30px rgba(30, 98, 208, 0.30);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .hero .cta:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(30, 98, 208, 0.38); }
-
-  /* ---------- Abschnitte ---------- */
-  section { max-width: 1060px; margin: 0 auto; padding: 56px 24px; }
-  .kicker {
-    color: var(--blue); font-weight: 700; font-size: 0.88rem;
-    letter-spacing: 0.16em; text-transform: uppercase;
-  }
-  h2 { font-size: 2rem; letter-spacing: -0.025em; margin-top: 8px; }
-  .lead { color: var(--ink-soft); max-width: 640px; margin-top: 10px; }
-
-  /* ---------- App-Karten ---------- */
-  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-top: 36px; }
-  .app-card {
-    background: var(--card);
-    backdrop-filter: blur(20px) saturate(1.3);
-    -webkit-backdrop-filter: blur(20px) saturate(1.3);
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    outline: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 34px 30px;
-    box-shadow: 0 22px 50px rgba(20, 60, 130, 0.10);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .app-card:hover { transform: translateY(-5px); box-shadow: 0 30px 60px rgba(20, 60, 130, 0.15); }
-  .app-card img.appicon {
-    width: 104px; height: 104px;
-    border-radius: 24%;
-    box-shadow: 0 10px 26px rgba(15, 30, 51, 0.16);
-    border: 0.5px solid rgba(15, 30, 51, 0.08);
-  }
-  .app-card h3 { font-size: 1.45rem; margin-top: 20px; letter-spacing: -0.02em; }
-  .app-card .sub { color: var(--blue); font-weight: 600; font-size: 0.98rem; margin-top: 2px; }
-  .app-card p.desc { color: var(--ink-soft); margin-top: 12px; font-size: 1rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-  .chip {
-    font-size: 0.82rem; font-weight: 600; color: var(--ink-soft);
-    background: rgba(30, 98, 208, 0.07);
-    border: 1px solid var(--line);
-    padding: 5px 12px; border-radius: 999px;
-  }
-  .chip.status { color: var(--blue); background: rgba(61, 139, 253, 0.12); }
-
-  /* ---------- Werte ---------- */
-  .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 34px; }
-  .value {
-    background: var(--card);
-    backdrop-filter: blur(20px) saturate(1.3);
-    -webkit-backdrop-filter: blur(20px) saturate(1.3);
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    outline: 1px solid var(--line);
-    border-radius: 22px; padding: 26px 24px;
-    box-shadow: 0 16px 38px rgba(20, 60, 130, 0.08);
-  }
-  .value .icon {
-    width: 46px; height: 46px; border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, rgba(61,139,253,0.16), rgba(30,98,208,0.10));
-    font-size: 1.35rem;
-  }
-  .value h3 { font-size: 1.08rem; margin-top: 14px; }
-  .value p { color: var(--ink-soft); font-size: 0.95rem; margin-top: 6px; }
-
-  /* ---------- Kontakt ---------- */
-  .contact-card {
-    margin-top: 34px; text-align: center;
-    background: linear-gradient(135deg, rgba(61,139,253,0.10), rgba(30,98,208,0.05)), var(--card);
-    backdrop-filter: blur(20px) saturate(1.3);
-    -webkit-backdrop-filter: blur(20px) saturate(1.3);
-    border: 1px solid rgba(255,255,255,0.85);
-    outline: 1px solid var(--line);
-    border-radius: var(--radius); padding: 48px 30px;
-    box-shadow: 0 22px 50px rgba(20, 60, 130, 0.10);
-  }
-  .contact-card p { color: var(--ink-soft); max-width: 480px; margin: 8px auto 0; }
-  /* ---------- Kontakt-Formular ---------- */
-  .contact-form {
-    max-width: 560px; margin: 28px auto 0; text-align: left;
-    display: grid; gap: 16px;
-  }
-  .contact-form .field label {
-    display: block; font-size: 0.88rem; font-weight: 600;
-    color: var(--ink); margin-bottom: 6px;
-  }
-  .contact-form .field label span.opt { color: var(--ink-soft); font-weight: 500; }
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    width: 100%; font: inherit; color: var(--ink);
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(30, 98, 208, 0.22);
-    border-radius: 14px; padding: 12px 14px;
-    outline: none;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    -webkit-appearance: none; appearance: none;
-  }
-  .contact-form textarea { resize: vertical; min-height: 130px; }
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    border-color: var(--blue-soft);
-    box-shadow: 0 0 0 3px rgba(61, 139, 253, 0.18);
-  }
-  .contact-form .select-wrap { position: relative; }
-  .contact-form .select-wrap::after {
-    content: "▾"; position: absolute; right: 14px; top: 50%;
-    transform: translateY(-50%); color: var(--ink-soft); pointer-events: none;
-  }
-  .contact-form button.send {
-    justify-self: center;
-    padding: 13px 34px; border-radius: 999px; border: none; cursor: pointer;
-    background: linear-gradient(135deg, var(--blue-soft), var(--blue));
-    color: #fff; font: inherit; font-weight: 600; font-size: 1.02rem;
-    box-shadow: 0 12px 30px rgba(30, 98, 208, 0.30);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  .contact-form button.send:hover { transform: translateY(-2px); }
-  .contact-form button.send:disabled { opacity: 0.6; transform: none; cursor: default; }
-  .form-note {
-    font-size: 0.82rem; color: var(--ink-soft); text-align: center; margin-top: 2px;
-  }
-  .form-status {
-    display: none; margin: 26px auto 0; max-width: 480px;
-    padding: 18px 22px; border-radius: 18px; font-weight: 500;
-  }
-  .form-status.ok {
-    display: block;
-    background: rgba(46, 160, 90, 0.10); color: #1E7A44;
-    border: 1px solid rgba(46, 160, 90, 0.25);
-  }
-  .form-status.err {
-    display: block;
-    background: rgba(200, 60, 60, 0.08); color: #A33333;
-    border: 1px solid rgba(200, 60, 60, 0.25);
-  }
-
-  /* ---------- Footer ---------- */
-  footer {
-    border-top: 1px solid var(--line);
-    margin-top: 40px; padding: 34px 24px 44px;
-    text-align: center; color: var(--ink-soft); font-size: 0.92rem;
-  }
-  footer .foot-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; color: var(--ink); }
-  footer .foot-brand img { width: 22px; height: 22px; }
-</style>
+<link rel="canonical" href="https://diamapps.com/">
+<link rel="alternate" hreflang="de" href="https://diamapps.com/">
+<link rel="alternate" hreflang="en" href="https://diamapps.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://diamapps.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiamApps">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://diamapps.com/">
+<meta property="og:title" content="DiamApps – Native Apps für iPhone, iPad und Mac">
+<meta property="og:description" content="DiamApps ist ein unabhängiges App-Studio: DiamVAT für die Umsatzsteuer, DiamLaw für Gesetze und Rechtsprechung, DiamMath für Mathematik. Nativ, offline, ohne Konto.">
+<meta property="og:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiamApps – Diamant-Logo mit den Apps DiamVAT, DiamLaw und DiamMath">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiamApps – Native Apps für iPhone, iPad und Mac">
+<meta name="twitter:description" content="DiamApps ist ein unabhängiges App-Studio: DiamVAT für die Umsatzsteuer, DiamLaw für Gesetze und Rechtsprechung, DiamMath für Mathematik. Nativ, offline, ohne Konto.">
+<meta name="twitter:image" content="https://diamapps.com/assets/og-diamapps.png">
+<meta name="theme-color" content="#1E62D0">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"DiamApps","url":"https://diamapps.com","logo":"https://diamapps.com/assets/diamapps-logo.svg","email":"support@diamapps.com","address":{"@type":"PostalAddress","streetAddress":"Str. Geisberg 36","postalCode":"87779","addressLocality":"Trunkelsberg","addressCountry":"DE"}}
+</script>
 </head>
 <body>
 <div class="stage" aria-hidden="true"></div>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
 <header>
   <div class="nav">
-    <img src="assets/diamapps-logo.svg" alt="">
-    <div class="brand">Diam<span>Apps</span></div>
+    <a class="brandlink" href="/">
+      <img src="assets/diamapps-logo.svg" alt="">
+      <div class="brand">Diam<span>Apps</span></div>
+    </a>
     <nav>
-      <a href="#apps">Apps</a>
-      <a href="#studio">Studio</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#apps" aria-current="page">Apps</a>
+      <a href="/studio/">Studio</a>
+      <a href="/support/">Support</a>
+      <a href="/kontakt/">Kontakt</a>
+      <span class="langswitch">
+        <a href="/" aria-current="true" hreflang="de">DE</a>
+        <a href="/en/" hreflang="en">EN</a>
+      </span>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="inhalt">
   <div class="hero">
     <img class="logo" src="assets/diamapps-logo.svg" alt="DiamApps – Liquid-Glass-Diamant-Logo">
     <h1>DiamApps</h1>
-    <div class="by">by Mario Onar</div>
     <p class="tag">Native Apps für iPhone, iPad und Mac – präzise entwickelt, elegant gestaltet und mit Datenschutz von Anfang an.</p>
     <a class="cta" href="#apps">Unsere Apps entdecken</a>
   </div>
@@ -281,48 +71,87 @@
       <article class="app-card">
         <img class="appicon" src="assets/diamvat.png" alt="DiamVAT App-Symbol – VAT im Sternenkranz, Diamantblau">
         <h3>DiamVAT</h3>
-        <div class="sub">USt-IdNr.-Prüfung &amp; Zusammenfassende Meldung</div>
-        <p class="desc">Prüft EU-Umsatzsteuer-Identifikationsnummern amtlich über BZSt und VIES – einzeln oder bequem als Excel-Massenprüfung. Mit qualifizierter Abfrage, PDF-Nachweisen und ZM-Vorbereitung für ELSTER.</p>
+        <div class="sub">Umsatzsteuer im Griff</div>
+        <p class="desc">Prüft USt-IdNrn. über die amtlichen Schnittstellen des Bundeszentralamts und VIES – einzeln oder als Stapel aus Excel. Dokumentiert jede Prüfung als PDF-Protokoll und bereitet Zusammenfassende Meldung, Voranmeldung und Jahreserklärung bis zur ELSTER-Übermittlung am Mac vor – in dieser Fassung ausschließlich als Testübermittlung an den Testzugang der Steuerverwaltung.</p>
+        <div class="chips">
+          <span class="chip">iPhone</span>
+          <span class="chip">iPad</span>
+          <span class="chip">Mac</span>
+          <span class="chip status">Beta 1.23.3</span>
+        </div>
+        <a class="more" href="/apps/diamvat/">DiamVAT ansehen →</a>
+      </article>
+
+      <article class="app-card">
+        <img class="appicon" src="assets/diamlaw.png" alt="DiamLaw App-Symbol – Paragraphenzeichen in Diamantblau">
+        <h3>DiamLaw</h3>
+        <div class="sub">Gesetze und Rechtsprechung offline</div>
+        <p class="desc">145 deutsche Bundesgesetze und 8 EU-Rechtsakte mit 23.790 Normen – vollständig offline, in einer ruhigen Leseansicht. Dazu Urteilssuche, Paragraphenketten, Markierungen, Notizen und ein Lernmodus mit geprüften Prüfungsschemata.</p>
+        <div class="chips">
+          <span class="chip">iPhone</span>
+          <span class="chip">iPad</span>
+          <span class="chip status">In Entwicklung</span>
+        </div>
+        <a class="more" href="/apps/diamlaw/">DiamLaw ansehen →</a>
+      </article>
+
+      <article class="app-card">
+        <img class="appicon" src="assets/diammath.png" alt="DiamMath App-Symbol – Koordinatensystem mit x- und y-Achse in Diamantblau">
+        <h3>DiamMath</h3>
+        <div class="sub">Zeichnen, rechnen, verstehen</div>
+        <p class="desc">Funktionen im maßstabstreuen 2D-Graphen, Flächen in 3D, Gleichungssysteme mit geprüftem Lösungsweg und eine eigene Mathe-Tastatur, die live in echten Formelsatz übersetzt. Alles rechnet lokal auf dem Gerät.</p>
         <div class="chips">
           <span class="chip">iPhone</span>
           <span class="chip">iPad</span>
           <span class="chip">Mac</span>
           <span class="chip status">In Entwicklung</span>
         </div>
+        <a class="more" href="/apps/diammath/">DiamMath ansehen →</a>
       </article>
+    </div>
+  </section>
 
-      <article class="app-card">
-        <img class="appicon" src="assets/diamlaw.png" alt="DiamLaw App-Symbol – Paragraphenzeichen in Diamantblau">
-        <h3>DiamLaw</h3>
-        <div class="sub">Gesetzestexte – lesen, markieren, verstehen</div>
-        <p class="desc">Bundesgesetze offline in einer eleganten Leseansicht – mit Markierungen, Notizen, eigenen Sammlungen und blitzschneller Suche. Ganz ohne Internetverbindung.</p>
-        <div class="chips">
-          <span class="chip">iPhone</span>
-          <span class="chip">iPad</span>
-          <span class="chip status">In Entwicklung</span>
-        </div>
-      </article>
+  <section id="design">
+    <div class="kicker">Familienmerkmal</div>
+    <h2>Ihre App, Ihr Aussehen</h2>
+    <p class="lead">Alle DiamApps teilen dieselbe Gestaltungsschicht: Jede App lässt sich so einrichten, dass sie zu Ihnen passt – nicht umgekehrt.</p>
+    <div class="values">
+      <div class="value">
+        <div class="icon" aria-hidden="true">🖼️</div>
+        <h3>Eigene Hintergründe</h3>
+        <p>Je Bereich ein eigenes Bild aus Ihrer Fotomediathek, mit stufenlos einstellbarer Deckkraft. Die Bilder bleiben auf Ihrem Gerät – nur wenn Sie den iCloud-Abgleich einschalten, liegen sie zusätzlich in Ihrer persönlichen iCloud.</p>
+      </div>
+      <div class="value">
+        <div class="icon" aria-hidden="true">🅰️</div>
+        <h3>Schrift nach Wunsch</h3>
+        <p>Schriftart, Größe, Zeilen- und Absatzabstand frei wählbar – und in DiamLaw sogar getrennte Schriftfarben für Text, Nebentext und Nummern.</p>
+      </div>
+      <div class="value">
+        <div class="icon" aria-hidden="true">💎</div>
+        <h3>Farben und Symbole</h3>
+        <p>Sieben Akzentfarben von Tiefblau bis Graphit, einstellbare Kartenfarben, Transparenz und Eckenradien – dazu App-Symbole in Edelsteinfarben mit Tag- und Nachtfassung.</p>
+      </div>
     </div>
   </section>
 
   <section id="studio">
     <div class="kicker">Studio</div>
     <h2>Über DiamApps</h2>
-    <p class="lead">DiamApps ist das unabhängige App-Studio von Mario Onar. Der Diamant steht für den Anspruch: klare Struktur, sauberer Schliff, bleibender Wert.</p>
+    <p class="lead">DiamApps ist ein unabhängiges App-Studio. Der Diamant steht für den Anspruch: klare Struktur, sauberer Schliff, bleibender Wert.</p>
 
     <div class="values">
       <div class="value">
-        <div class="icon">⌘</div>
+        <div class="icon" aria-hidden="true">⌘</div>
         <h3>100 % nativ</h3>
         <p>Swift, SwiftUI und die neuesten Apple-Technologien – keine Kompromisse, kein Framework-Ballast.</p>
       </div>
       <div class="value">
-        <div class="icon">🔒</div>
+        <div class="icon" aria-hidden="true">🔒</div>
         <h3>Datenschutz zuerst</h3>
-        <p>Daten bleiben lokal auf dem Gerät. Keine Accounts, kein Tracking, keine Cloud-Pflicht.</p>
+        <p>Daten bleiben lokal auf dem Gerät. Keine Konten, kein Tracking, keine Cloud-Pflicht – der iCloud-Abgleich ist immer Ihre Entscheidung.</p>
       </div>
       <div class="value">
-        <div class="icon">✨</div>
+        <div class="icon" aria-hidden="true">✨</div>
         <h3>Liebe zum Detail</h3>
         <p>Modernes Design, flüssige Animationen und durchdachte Bedienung – bis ins letzte Pixel.</p>
       </div>
@@ -333,104 +162,24 @@
     <div class="contact-card">
       <div class="kicker">Kontakt</div>
       <h2>Sprechen wir!</h2>
-      <p>Fragen zu einer App, Feedback oder eine Idee? Füll einfach das Formular aus – wir antworten persönlich.</p>
-
-      <form class="contact-form" id="contactForm" novalidate>
-        <div class="field">
-          <label for="cf-name">Ihr Name</label>
-          <input id="cf-name" name="name" type="text" required
-                 autocomplete="name" placeholder="Vor- und Nachname">
-        </div>
-        <div class="field">
-          <label for="cf-email">Ihre E-Mail-Adresse</label>
-          <input id="cf-email" name="email" type="email" required
-                 autocomplete="email" inputmode="email" placeholder="name@beispiel.de">
-        </div>
-        <div class="field">
-          <label for="cf-topic">Worum geht es?</label>
-          <div class="select-wrap">
-            <select id="cf-topic" name="topic">
-              <option>Frage zu DiamVAT</option>
-              <option>Frage zu DiamLaw</option>
-              <option>Feedback</option>
-              <option>Sonstiges</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="cf-message">Ihre Nachricht</label>
-          <textarea id="cf-message" name="message" required
-                    placeholder="Wie können wir helfen?"></textarea>
-        </div>
-        <!-- Spam-Schutz: unsichtbares Feld, das nur Bots ausfüllen -->
-        <input type="checkbox" name="botcheck" tabindex="-1"
-               style="display:none" aria-hidden="true">
-        <button class="send" type="submit">Nachricht senden</button>
-        <div class="form-note">Ihre Angaben werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und nicht weitergegeben.</div>
-      </form>
-      <div class="form-status" id="formStatus" role="status"></div>
+      <p>Fragen zu einer App, Feedback oder eine Idee? Schreiben Sie uns – Sie bekommen eine persönliche Antwort.</p>
+      <p style="margin-top:18px;"><a class="cta" href="/kontakt/">Zum Kontaktformular</a></p>
+      <p style="margin-top:20px; font-size:0.95rem;">Bei Fragen zu einer bestimmten App hilft oft schon die <a href="/support/">Support-Seite</a> weiter.</p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="foot-brand"><img src="assets/diamapps-logo.svg" alt="">DiamApps</div>
-  <div style="margin-top:8px;">© 2026 DiamApps · by Mario Onar · Alle Rechte vorbehalten.</div>
+  <div class="footlinks">
+    <a href="/apps/diamvat/">DiamVAT</a>
+    <a href="/apps/diamlaw/">DiamLaw</a>
+    <a href="/apps/diammath/">DiamMath</a>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+  </div>
+  <div class="copy">© 2026 DiamApps</div>
 </footer>
 
-<script>
-// Kontaktformular → Web3Forms-Relay. Die Ziel-E-Mail ist beim Dienst
-// hinterlegt und taucht hier bewusst NICHT auf – der Access Key ist
-// laut Web3Forms ausdrücklich für öffentliches HTML gedacht.
-(function () {
-  var ACCESS_KEY = "b4ac2077-1ffb-4481-a15c-ada364ed1a0f";
-  var form = document.getElementById("contactForm");
-  var status = document.getElementById("formStatus");
-  if (!form) return;
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-
-    var button = form.querySelector("button.send");
-    button.disabled = true;
-    button.textContent = "Wird gesendet …";
-    status.className = "form-status";
-    status.textContent = "";
-
-    var topic = form.topic.value;
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({
-        access_key: ACCESS_KEY,
-        subject: "DiamApps-Anfrage: " + topic,
-        from_name: "DiamApps Webseite",
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        replyto: form.email.value.trim(),
-        topic: topic,
-        message: form.message.value.trim(),
-        botcheck: form.botcheck.checked
-      })
-    }).then(function (response) {
-      return response.json().then(function (data) {
-        if (response.ok && data.success) {
-          form.style.display = "none";
-          status.className = "form-status ok";
-          status.textContent = "Vielen Dank! Ihre Nachricht ist angekommen – wir melden uns zeitnah bei Ihnen.";
-        } else {
-          throw new Error(data.message || "Unbekannter Fehler");
-        }
-      });
-    }).catch(function () {
-      status.className = "form-status err";
-      status.textContent = "Das hat leider nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.";
-      button.disabled = false;
-      button.textContent = "Nachricht senden";
-    });
-  });
-})();
-</script>
 </body>
 </html>
