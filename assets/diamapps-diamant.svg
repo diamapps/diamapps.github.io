@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DiamApps – Diamant">
+  <defs>
+    <linearGradient id="kroneL" x1="0.1" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#5C5349"/><stop offset="1" stop-color="#2E2A25"/>
+    </linearGradient>
+    <linearGradient id="tafel" x1="0.05" y1="0" x2="0.95" y2="1">
+      <stop offset="0" stop-color="#7E7263"/><stop offset="0.42" stop-color="#DACAA6"/>
+      <stop offset="0.72" stop-color="#B7A78A"/><stop offset="1" stop-color="#8A7D69"/>
+    </linearGradient>
+    <linearGradient id="kroneR" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#D6C7A6"/><stop offset="1" stop-color="#736853"/>
+    </linearGradient>
+    <linearGradient id="pavL" x1="0.2" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#4A443B"/><stop offset="1" stop-color="#191713"/>
+    </linearGradient>
+    <linearGradient id="pavM" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#C3B294"/><stop offset="0.30" stop-color="#7A6E5C"/>
+      <stop offset="1" stop-color="#201E1A"/>
+    </linearGradient>
+    <linearGradient id="pavR" x1="0.9" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#8B7F69"/><stop offset="1" stop-color="#1E1B17"/>
+    </linearGradient>
+    <linearGradient id="rundiste" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9B688" stop-opacity="0"/>
+      <stop offset="0.22" stop-color="#F0DCAE" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#FFF8E6"/>
+      <stop offset="0.78" stop-color="#F3E2B8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#C9B688" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="schein" cx="0.5" cy="0.44" r="0.5">
+      <stop offset="0" stop-color="#E9D2A2" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#C8A868" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="flare" x="-50%" y="-400%" width="200%" height="900%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="226" rx="216" ry="150" fill="url(#schein)"/>
+
+  <!-- Krone: Tafel oben, zwei Schulterfacetten -->
+  <path d="M100 212 L170 128 L214 212 Z" fill="url(#kroneL)"/>
+  <path d="M170 128 L342 128 L298 212 L214 212 Z" fill="url(#tafel)"/>
+  <path d="M342 128 L412 212 L298 212 Z" fill="url(#kroneR)"/>
+
+  <!-- Pavillon: kurz und breit wie beim Brillanten -->
+  <path d="M100 212 L214 212 L256 398 Z" fill="url(#pavL)"/>
+  <path d="M214 212 L298 212 L256 398 Z" fill="url(#pavM)"/>
+  <path d="M298 212 L412 212 L256 398 Z" fill="url(#pavR)"/>
+
+  <g stroke="#E8D8B2" stroke-opacity="0.26" stroke-width="1.5" fill="none" stroke-linejoin="round">
+    <path d="M100 212 L170 128 L342 128 L412 212 Z"/>
+    <path d="M214 212 L170 128 M298 212 L342 128"/>
+    <path d="M100 212 L256 398 L412 212"/>
+    <path d="M214 212 L256 398 M298 212 L256 398"/>
+  </g>
+
+  <!-- Lichtstreif auf der Rundiste: doppelt gelegt für den Glanz -->
+  <rect x="88" y="206" width="336" height="12" fill="url(#rundiste)" filter="url(#flare)" opacity="0.85"/>
+  <rect x="100" y="210" width="312" height="3.6" fill="url(#rundiste)"/>
+
+  <path d="M366 104 l5.5 16 16 5.5 -16 5.5 -5.5 16 -5.5 -16 -16 -5.5 16 -5.5 Z" fill="#F7EACA" opacity="0.9"/>
+  <path d="M132 254 l3.5 10.5 10.5 3.5 -10.5 3.5 -3.5 10.5 -3.5 -10.5 -10.5 -3.5 10.5 -3.5 Z" fill="#EBDCB4" opacity="0.45"/>
+</svg>
