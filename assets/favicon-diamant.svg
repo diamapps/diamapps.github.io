@@ -1,20 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="fvKrone" x1="0.05" y1="0" x2="0.95" y2="1">
-      <stop offset="0" stop-color="#8A7D69"/><stop offset="0.45" stop-color="#DACAA6"/>
-      <stop offset="1" stop-color="#8A7D69"/>
+    <linearGradient id="fk" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#EDEFF1"/><stop offset="1" stop-color="#8A9198"/>
     </linearGradient>
-    <linearGradient id="fvPav" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#B5A488"/><stop offset="1" stop-color="#3A342D"/>
+    <linearGradient id="fp" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#C2C8CE"/><stop offset="1" stop-color="#2A2E32"/>
     </linearGradient>
   </defs>
-  <!-- Fläche, damit das Zeichen auch auf hellen Reiterleisten steht -->
-  <rect width="512" height="512" rx="112" fill="#141210"/>
-  <path d="M108 214 L172 132 L340 132 L404 214 Z" fill="url(#fvKrone)"/>
-  <path d="M108 214 L404 214 L256 396 Z" fill="url(#fvPav)"/>
-  <g stroke="#F2E4C2" stroke-opacity="0.45" stroke-width="6" fill="none" stroke-linejoin="round">
-    <path d="M108 214 L172 132 L340 132 L404 214 L256 396 Z"/>
-    <path d="M216 214 L172 132 M296 214 L340 132 M216 214 L256 396 M296 214 L256 396"/>
-  </g>
-  <rect x="108" y="210" width="296" height="7" fill="#FFF6DF" opacity="0.9"/>
+  <rect width="512" height="512" rx="112" fill="#0A0A0B"/>
+  <path d="M96 244 L176 124 L256 208 L336 124 L416 244 Z" fill="url(#fk)"/>
+  <path d="M96 244 L416 244 L256 424 Z" fill="url(#fp)"/>
+  <path d="M176 124 L336 124 L256 208 Z" fill="#17191C"/>
+  <rect x="96" y="240" width="320" height="8" fill="#FFE7B4"/>
 </svg>
