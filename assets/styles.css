@@ -4,8 +4,8 @@
    DUNKLE FASSUNG (04.09.2026). Marios Vorgabe: elegant, dunkel, modern.
    Mattes Schwarz als Grund, Flächen nur eine Spur davon abgesetzt, und
    als Akzent ein heller Diamantton – ein kühles, sehr helles Blau, das
-   die Farbe des Steins aufnimmt. Warm ist allein der Lichtstreif im
-   Logo. Funktionen, Texte und Namen sind unverändert; geändert sind
+   die Titan-Night-Facetten des Steins aufnimmt. Funktionen, Texte und
+   Namen sind unverändert; geändert sind
    ausschließlich Farben, Flächen und das Logo.
 
    Kontraste sind gerechnet, nicht geschätzt (Grund --bg #050505):
@@ -101,8 +101,7 @@ header {
   max-width: 1060px; margin: 0 auto; padding: 14px 24px;
   display: flex; align-items: center; gap: 12px;
 }
-.nav img { width: 34px; height: 34px; }
-.nav img.titan-night-mark { object-fit: contain; }
+.nav img { width: 34px; height: 34px; object-fit: contain; }
 .nav a.brandlink { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; }
 /* Die Wortmarke traegt bewusst eine eigene Groesse: sie ist Markenzeichen,
    kein Text – deshalb steht sie ausserhalb der Skala. */
@@ -135,10 +134,10 @@ header {
 .hero { max-width: 1060px; margin: 0 auto; padding: 84px 24px 64px; text-align: center; }
 .hero img.logo {
   width: 118px; height: 118px;
+  object-fit: contain;
   animation: floaty 8s ease-in-out infinite;
   filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.6));
 }
-.hero img.logo.titan-night-logo { object-fit: contain; }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 @media (prefers-reduced-motion: reduce) { .hero img.logo { animation: none; } }
 .hero h1 {
@@ -412,7 +411,7 @@ footer {
   text-align: center; color: var(--ink-soft); font-size: var(--t-klein);
 }
 footer .foot-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; color: var(--ink); }
-footer .foot-brand img { width: 22px; height: 22px; }
+footer .foot-brand img { width: 22px; height: 22px; object-fit: contain; display: block; }
 footer .footlinks { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
 footer .footlinks a { color: var(--ink-soft); text-decoration: none; }
 footer .footlinks a:hover { color: var(--diamant); text-decoration: underline; }
