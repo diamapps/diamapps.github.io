@@ -23,6 +23,10 @@
   --flaeche-hoch: #131316;
   --line: rgba(255, 255, 255, 0.09);
   --card-kante: rgba(255, 255, 255, 0.07);
+  /* App-Symbole tragen seit 1.0.7 den Nachtgrund der Apps (#16161B) und wären
+     sonst kaum von der Karte zu unterscheiden – dieser feine helle Rand setzt
+     sie ab, ohne aufzutragen. Nur hier; die Symbole selbst sind unverändert. */
+  --appicon-kante: rgba(255, 255, 255, 0.24);
   --schatten: 0 22px 50px rgba(0, 0, 0, 0.6);
   --radius: 26px;
 
@@ -189,7 +193,7 @@ h2 { font-size: var(--t-h2); letter-spacing: -0.025em; margin-top: var(--a-etike
 .app-card img.appicon {
   width: 104px; height: 104px; border-radius: 24%;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  border: 0.5px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid var(--appicon-kante);
 }
 .app-card h3 { font-size: var(--t-h3); margin-top: 20px; letter-spacing: -0.02em;
   line-height: var(--z-h3);
@@ -238,7 +242,7 @@ h2 { font-size: var(--t-h2); letter-spacing: -0.025em; margin-top: var(--a-etike
 .apphead img.appicon {
   width: 124px; height: 124px; border-radius: 24%;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55);
-  border: 0.5px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid var(--appicon-kante);
   flex-shrink: 0;
 }
 .apphead h1 {
