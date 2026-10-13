@@ -81,24 +81,24 @@
   <section id="diamvat">
     <div class="kicker">DiamVAT</div>
     <h2>Checking, recording and preparing VAT returns</h2>
-    <p class="lead">DiamVAT checks Umsatzsteuer-Identifikationsnummern (German VAT identification numbers) against the register held by the Bundeszentralamt für Steuern (the Federal Central Tax Office). Every check is documented as a PDF, and the app prepares the Zusammenfassende Meldung (EC Sales List), the Umsatzsteuer-Voranmeldung (advance VAT return) and the annual VAT return.</p>
+    <p class="lead">DiamVAT checks Umsatzsteuer-Identifikationsnummern (German VAT identification numbers) against the register held by the Bundeszentralamt für Steuern (the Federal Central Tax Office). Every check is documented as a PDF, and the app runs the official check on the Zusammenfassende Meldung (EC Sales List), the Umsatzsteuer-Voranmeldung (advance VAT return) and the annual VAT return and submits them to the tax administration.</p>
 
     <dl class="specs">
       <div class="row">
         <dt>Devices</dt>
-        <dd>iPhone, iPad and Mac – one app from one project.</dd>
+        <dd>iPhone, iPad and Mac – one app from one project. A purchase applies on every device with the same Apple ID.</dd>
       </div>
       <div class="row">
         <dt>System version</dt>
         <dd>iOS 26, iPadOS 26 or macOS 26 and later. Older systems are not supported.</dd>
       </div>
       <div class="row">
-        <dt>Mac only</dt>
-        <dd>The official confirmation check and the transmission to ELSTER (the German tax authorities’ online filing system) run through the tax administration’s ERiC interface – in this version solely as a test submission to the tax administration’s test system. That interface exists for desktop systems only, which is why these steps are available in the Mac version alone.</dd>
+        <dt>Check and submit</dt>
+        <dd>The official check and the submission to ELSTER (the German tax authorities’ online filing system) run through the tax administration’s ERiC interface. On the Mac it works inside the app; on iPhone and iPad it runs in DiamVAT’s transmission service on a server in Germany, because ERiC exists for desktop systems only.</dd>
       </div>
       <div class="row">
         <dt>Version</dt>
-        <dd>1.23.3 (beta). The app is still in testing and is not yet on the App Store.</dd>
+        <dd>1.45.0, as of October 2026.</dd>
       </div>
     </dl>
 
@@ -112,16 +112,20 @@
         <p>Your check history, imports, EC Sales List entries, drafts, companies and your appearance and navigation settings are kept in step between your devices through your personal iCloud. Four things deliberately stay on the device: the app icon, the certificate PIN, the active company and the selected EC Sales List reporting period. DiamApps runs no server of its own for this and sees none of it. When you switch sync on, the app says explicitly that sensitive company data travels with it and waits for your consent.</p>
       </div>
       <div class="mini">
-        <h3>Why can I not file from my iPhone?</h3>
-        <p>Because the official ERiC interface exists for desktop systems only. iPhone and iPad let you record and calculate everything, run the checks in advance and produce the forms as PDFs. The draft then travels to your Mac via iCloud, and that is where transmission takes place – in this version solely as a test submission to the tax administration’s test system.</p>
+        <h3>Can I file from my iPhone?</h3>
+        <p>Yes. Because the official ERiC interface exists for desktop systems only, DiamVAT runs it for iPhone and iPad in its own transmission service on a server in Germany. Certificate and PIN travel there in an encrypted envelope; the service stores nothing. Without an internet connection, the iPhone is limited to entering, calculating, pre-checking and producing the form PDFs.</p>
       </div>
       <div class="mini">
-        <h3>Can I already file a legally effective return?</h3>
-        <p>No. The current beta only ever sends to the tax administration’s test endpoint; the program contains no path for live transmission at all. Filing with legal effect is therefore deliberately impossible in this version.</p>
+        <h3>Is a submission binding?</h3>
+        <p>Yes. After the official check, an overview sheet shows every detail; only your confirmation sends the return to the tax administration with your certificate. The transfer ticket in the submission record proves receipt. Mein ELSTER does not list submissions made from apps under “Übermittelte Formulare” (submitted forms) – that is not an error.</p>
+      </div>
+      <div class="mini">
+        <h3>What does DiamVAT cost?</h3>
+        <p>Downloading and Basic are free. DiamVAT Pro costs €7.99 once and unlocks, among other things, the submission of every return; you can try Pro free for 14 days. To bring a purchase to a new device, use Settings → “Restore purchases”.</p>
       </div>
       <div class="mini">
         <h3>Where do I find instructions?</h3>
-        <p>Under “Help” in the app there are eight step-by-step guides – from the simple and the qualified check through bulk checking to a finished Zusammenfassende Meldung – plus two short screen recordings taken from the app.</p>
+        <p>Under Settings → “Guides” in the app there are 22 step-by-step guides – from the simple and the qualified check through bulk checking, the EC Sales List, the advance return and the annual return to messages to the tax office – plus two short screen recordings taken from the app.</p>
       </div>
       <div class="mini">
         <h3>My question is not answered here</h3>
