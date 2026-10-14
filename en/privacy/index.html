@@ -70,6 +70,8 @@
     <address>
       Mario Onar<br>
       DiamApps<br>
+      Am Geisberg 36<br>
+      87779 Trunkelsberg<br>
       Germany
     </address>
     <p>Email: <a href="mailto:support@diamapps.com">support@diamapps.com</a></p>
@@ -119,11 +121,15 @@
 
     <h2>7. Our apps</h2>
     <p>This policy covers the website. Our apps are separate from it: they send no data to us. Whatever you create in an app stays on your device or – if you switch that on explicitly – in your personal iCloud, to which we have no access. Each app has its own privacy information, which you will find in the app itself and on the relevant product page. Where an app communicates with an official body or another service, that is described there.</p>
+    <p>DiamVAT is one exception, which we name explicitly: on iPhone and iPad, “Official check” and the submission go to DiamVAT’s transmission service, which we run on a server in Germany (Hetzner Online GmbH data centre, Nuremberg) – only after your consent per device, which the app asks for when you store your certificate or before the first check, and only when you trigger a check or a submission. What is transmitted: the filing record (company data, tax number or VAT ID, the figures you entered, for the EC Sales List your partners’ VAT IDs with amounts, for messages to the tax office the text and PDF attachments) and the manufacturer ID; for a submission additionally your certificate file and PIN in an envelope that only the service can open (X25519, ChaCha20-Poly1305 per RFC 9180), on top of transport encryption. The service checks the record with the tax administration’s library or submits it to the tax administration and returns the result and the transfer ticket. It stores nothing: no account, no database, no copy of the record or the attachments, no certificate, no PIN – everything exists only in memory for the duration of the call. Its access log contains time, call, status and duration, no contents. It does not store IP addresses; to protect against abuse it counts calls only under a hashed identifier that it forgets after about a minute and a half. The legal basis for this is Article 6(1)(f) GDPR, our legitimate interest in secure operation. Every request carries a proof of the app’s authenticity (Apple App Attest); Apple learns only the identifier of that proof, no tax data. Hetzner provides the server as a processor under Article 28 GDPR. The legal basis is Article 6(1)(b) GDPR. On the Mac the library runs inside the app and submits directly, without this service; you can withdraw your consent in the app at any time. The recipient of a submission is the tax administration – your tax office, or the Federal Central Tax Office for the EC Sales List. Its privacy notices apply there; the app shows them before first use.</p>
+    <p>In addition, at your request DiamVAT uses the camera to photograph an invoice for VAT ID recognition – recognition runs on the device, the image is neither stored nor transmitted – and Face ID or Touch ID to protect the PIN of your ELSTER certificate kept in the keychain. VAT ID checks go directly to the Federal Central Tax Office (BZSt) or the EU database VIES; those bodies’ privacy notices apply there.</p>
+    <p><strong>DiamLaw</strong> works without an account and without servers of our own. The statutory texts are stored completely in the app. Only the case-law search sends your search term to the federal legal information portal (Federal Office of Justice, rechtsprechung-im-internet.de), whose privacy notice applies there. The citation scanner uses the camera solely on the device to recognise a reference such as “§ 433 BGB” – no images are stored or transmitted. Explanations and summaries with Apple Intelligence are generated entirely on the device. If you switch on iCloud sync, highlights, notes, settings and images are additionally stored in your personal iCloud; the purchase of DiamLaw Pro is handled by Apple through the App Store.</p>
+    <p>Camera and photos: on request, DiamMath can photograph a handwritten or printed function or read a photo from your library. Text recognition runs entirely on your device; the image is neither stored nor transmitted to us or to third parties. You grant access to the camera and photos explicitly in iOS or macOS and can revoke it at any time in the system settings.</p>
 
     <h2>8. Changes to this policy</h2>
     <p>If the technology behind this website changes or new legal requirements apply, we will adapt this policy. The version published here is the one that applies. The date at the end of the page shows you how current it is.</p>
 
-    <p class="updated">Last updated: September 2026</p>
+    <p class="updated">Last updated: October 2026</p>
   </section>
 </main>
 
