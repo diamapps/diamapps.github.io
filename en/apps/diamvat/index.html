@@ -79,7 +79,7 @@
   </div>
 
   <div class="appintro">
-    <p>DiamVAT is the native German VAT app for iPhone, iPad and Mac. It checks USt-IdNrn. (VAT identification numbers) through the official interfaces of the Bundeszentralamt für Steuern (BZSt, the German Federal Central Tax Office) and the EU database VIES. Every check is documented as an archivable PDF record. The Zusammenfassende Meldung (EC Sales List), Umsatzsteuer-Voranmeldung (advance VAT return), Dauerfristverlängerung (permanent filing extension) and Jahreserklärung (annual VAT return) are taken all the way to filing: run the official check, then submit them to the tax administration with binding effect. Messages to the tax office come on top – objections, deadline extensions, deferrals and supporting documents. Written for sole traders, small businesses, qualified agents and tax advisers.</p>
+    <p>DiamVAT is the native German VAT app for iPhone, iPad and Mac. It checks USt-IdNrn. (VAT identification numbers) through the official interfaces of the Bundeszentralamt für Steuern (BZSt, the German Federal Central Tax Office) and the EU database VIES. Every check is documented as an archivable PDF record. The Zusammenfassende Meldung (EC Sales List), Umsatzsteuer-Voranmeldung (advance VAT return), Dauerfristverlängerung (permanent filing extension) and Jahreserklärung (annual VAT return) are taken all the way to filing: run the official check, then submit them to the tax administration with binding effect – guided, if you like, by the DiamAssistent in everyday language. Messages to the tax office come on top – objections, deadline extensions, deferrals and supporting documents. Written for sole traders, small businesses, qualified agents and tax advisers.</p>
   </div>
 
   <div class="toc">
@@ -87,6 +87,7 @@
     <a href="#record">The record</a>
     <a href="#batch">Batch checking</a>
     <a href="#returns">Returns</a>
+    <a href="#assistant">DiamAssistent</a>
     <a href="#elster">To ELSTER</a>
     <a href="#messages">Messages to the tax office</a>
     <a href="#companies">Several companies</a>
@@ -140,6 +141,7 @@
           <li>Every “invalid” is automatically checked a second time before it is allowed to stand in the record.</li>
           <li>Progress is visible, and each row carries its own result.</li>
           <li>Rows that were not queried do not simply disappear: they appear in the report with the reason why.</li>
+          <li>Batch checks keep running in the background, and a notification tells you when they are done.</li>
         </ul>
       </div>
     </div>
@@ -205,6 +207,22 @@
     </div>
   </section>
 
+  <section id="assistant">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">DiamAssistent</div>
+        <h2>Answer questions instead of hunting for boxes</h2>
+        <p>The DiamAssistent guides you in everyday language through the advance return, the annual return, the EC Sales List and the permanent filing extension: you answer questions, DiamVAT fills in the boxes. When you create a return you choose “With the DiamAssistent” or “Fill in yourself” – both end up in the same draft, and “To the form” shows every field at any time.</p>
+        <ul>
+          <li>The ⓘ explains every question, including the legal basis. You only see the fields that concern you – without business abroad, there are no fields for it.</li>
+          <li>The assistant calculates tax and input tax itself, including for services from foreign suppliers. At the end you see the result, any missing details, notes and the filing deadline.</li>
+          <li>It remembers for each company what your returns look like and asks next time “Is everything as in your last advance return?” – then you only enter the amounts.</li>
+          <li>For the EC Sales List it first establishes whether you have to report at all and reconciles the list with your advance returns. For the permanent extension it works out the special prepayment from the previous year’s advance returns.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="elster">
     <div class="feature">
       <div class="feature-text">
@@ -225,7 +243,7 @@
     <dl class="specs">
       <div class="row">
         <dt>iPhone and iPad</dt>
-        <dd>iOS or iPadOS 26: enter, calculate, produce PDFs of the official forms, run the official check and submit – the official checking library runs in DiamVAT’s transmission service on a server in Germany. Drafts sync with the Mac through iCloud.</dd>
+        <dd>iOS or iPadOS 26: enter, calculate, produce PDFs of the official forms, run the official check and submit – the official checking library runs in DiamVAT’s transmission service on a server in Germany. Entering, calculating, pre-checking and form PDFs also work without an internet connection. Drafts sync with the Mac through iCloud.</dd>
       </div>
       <div class="row">
         <dt>Mac</dt>
@@ -254,7 +272,7 @@
         <p>What you would otherwise fill in as a form in Mein ELSTER goes from DiamVAT the same way as the returns: officially checked, submitted with your certificate and documented with a record and transfer ticket. A separate area in the sidebar gathers all messages to the tax office.</p>
         <ul>
           <li>Objection (Einspruch) against an assessment, with supplement and withdrawal, and on request with an application to suspend enforcement. The app works out the objection deadline from the date of the assessment.</li>
-          <li>Application to extend the deadline for a tax return, and application for deferral by offsetting against a refund.</li>
+          <li>Application to extend the deadline for a tax return or advance return, and application for deferral – by offsetting against an expected refund or informally with reasons.</li>
           <li>Free-form message to the tax office and supporting documents for VAT – with up to 20 PDF attachments per submission.</li>
         </ul>
       </div>
@@ -272,6 +290,7 @@
           <li>The tiles are built from count queries, so the view opens just as quickly with 5,000 records in the archive as with 500.</li>
           <li>You type the tax number exactly as it appears on your assessment; DiamVAT converts it into the 13-digit ELSTER format – confirmed for all 16 federal states. The app also names the tax office, drawing on the official directory of 746 offices.</li>
           <li>The same USt-IdNr. on two companies is reported as an error and blocks submission: two companies cannot file under one VAT number.</li>
+          <li>VAT groups (Organschaft): the controlling company and its subsidiaries form a group, for which DiamVAT prepares the consolidated advance return.</li>
         </ul>
       </div>
       <div class="shot">
@@ -330,6 +349,14 @@
         <h3>Diagnostics without disclosure</h3>
         <p>The local diagnostic log shows status, response code, duration and transport errors. Sharing has a route of its own that masks the VAT numbers – intended for professionals bound by confidentiality under section 203 StGB (the German Criminal Code).</p>
       </div>
+      <div class="mini">
+        <h3>App lock</h3>
+        <p>If you wish, DiamVAT opens only with Face ID or Touch ID.</p>
+      </div>
+      <div class="mini">
+        <h3>Backup</h3>
+        <p>Under Settings → iCloud &amp; backup you export your data as a file and restore it when needed – even without iCloud at all.</p>
+      </div>
     </div>
   </section>
 
@@ -352,7 +379,7 @@
       </div>
       <div class="mini">
         <h3>Guides and two recordings</h3>
-        <p>22 step-by-step guides – from a simple check through the EC Sales List, advance return and annual return to objections and deferrals, including the question of which reporting period actually applies to you. Alongside them, two genuine screen recordings from the app, each under a minute, with no autoplay and no network connection.</p>
+        <p>23 step-by-step guides – from a simple check through the EC Sales List, advance return, annual return and the DiamAssistent to objections, deferrals and backups, including the question of which reporting period actually applies to you. Alongside them, two genuine screen recordings from the app, each under a minute, with no autoplay and no network connection.</p>
       </div>
       <div class="mini">
         <h3>On the large screen</h3>
@@ -409,16 +436,15 @@
       <h2>Honestly</h2>
       <p>These are the limits of the current version – and we would rather name them here than have you discover them later:</p>
       <ul>
-        <li>The ERiC interface does not exist for iOS or iPadOS; iPhone and iPad therefore check and transmit through DiamVAT’s transmission service on a server in Germany – without an internet connection they are limited to entering, calculating, pre-checking and producing PDFs of the forms.</li>
         <li>A submission cannot be recalled, only replaced by a corrected return. Take your time with the overview sheet.</li>
         <li>Mein ELSTER does not list submissions made from apps under “Übermittelte Formulare” (submitted forms). The proof is the transfer ticket in DiamVAT’s submission record.</li>
         <li>German USt-IdNrn. go through VIES, without a company data comparison. Only the BZSt’s answer on non-German numbers can support the good-faith protection under section 6a(4) UStG, and the app labels this everywhere.</li>
         <li>Checking a tax number only tells you that it is formally well-formed – not that it was actually issued.</li>
         <li>The app does not decide whether a transaction is reportable; it does not know the route the goods took. It warns and suggests, and you decide.</li>
-        <li>The advance return and the annual return are available for the 2025 and 2026 tax years; the year picker offers only years for which the official checking library ships with the app.</li>
+        <li>The advance return and the annual return are available for the 2025 and 2026 tax years; the year picker offers only years for which the official checking library is available.</li>
         <li>VAT groups (Organschaft) are covered for the consolidated advance return; a merged annual return for the whole group does not exist yet.</li>
         <li>The Zusammenfassende Meldung has no entries for the call-off stock arrangement (section 6b UStG); Elma5, and the EC Sales List via Elma5, are deliberately excluded.</li>
-        <li>DiamVAT applies for deferral only by offsetting against a refund; the full deferral application with its questionnaire is not available.</li>
+        <li>DiamVAT applies for deferral by offsetting against an expected refund or informally as a message with reasons; the full deferral application with its questionnaire is not available.</li>
         <li>Deadline calculation knows only the nine nationwide public holidays; state holidays are not taken into account, and in such cases the app names the day that is safe nationwide.</li>
         <li>The compliance timeline is not a gapless audit trail: deleted drafts disappear from it. The records you can rely on are the check archive and the submission records.</li>
         <li>Arranging the tab bar and sidebar applies to iPhone and iPad; on the Mac the fixed sidebar with all areas remains.</li>
