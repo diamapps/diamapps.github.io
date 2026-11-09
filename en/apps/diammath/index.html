@@ -31,7 +31,7 @@
 <meta name="theme-color" content="#050505">
 <link rel="stylesheet" href="../../../assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DiamMath","applicationCategory":"EducationalApplication","operatingSystem":"iOS 26, iPadOS 26, macOS 26","softwareVersion":"0.7.21","inLanguage":["de","en"],"description":"Plot functions, examine curves, compute integrals, render surfaces in 3D and solve equation systems with a worked solution path.","publisher":{"@type":"Organization","name":"DiamApps","url":"https://diamapps.com"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DiamMath","applicationCategory":"EducationalApplication","operatingSystem":"iOS 26, iPadOS 26, macOS 26","softwareVersion":"1.0.2","inLanguage":["de","en"],"description":"Plot functions, examine curves, compute integrals, render surfaces in 3D and solve equation systems with a worked solution path.","publisher":{"@type":"Organization","name":"DiamApps","url":"https://diamapps.com"}}
 </script>
 </head>
 <body>
@@ -66,8 +66,8 @@
       <h1>DiamMath</h1>
       <p class="claim">Plot it, work it out, understand it.</p>
       <div class="meta">
-        <span class="badge dev">In development</span>
-        <span>As of September 2026 · Version 0.7.21 (build 49)</span>
+        <a class="badge" href="https://apps.apple.com/us/app/id6820259733">On the App Store</a>
+        <span>As of November 2026 · Version 1.0.2</span>
       </div>
       <div class="meta">
         <span>iPhone, iPad and Mac running iOS, iPadOS or macOS 26 · fully available in German and English</span>
@@ -86,10 +86,13 @@
     <a href="#gleichungen">Equation systems</a>
     <a href="#raum">3D graph</a>
     <a href="#tastatur">Maths keyboard</a>
-    <a href="#blaetter">Worksheets</a>
+    <a href="#scanner">Function scanner</a>
+    <a href="#formeln">Formula collection</a>
+    <a href="#blaetter">Workbooks</a>
     <a href="#werkstatt">Workshops</a>
     <a href="#design">App design</a>
     <a href="#zugang">Accessibility and data</a>
+    <a href="#stufen">Basic and Pro</a>
     <a href="#ehrlich">Honestly</a>
   </div>
 
@@ -124,6 +127,7 @@
           <li>A tap places the crosshair – the legend then shows each curve’s value at that position</li>
           <li>If a or b appear in a function, the app creates the sliders itself – with minimum, maximum, step size and a play button</li>
           <li>Implicit curves too: circles, ellipses and hyperbolas, with x² + y² = 25 drawn precisely</li>
+          <li>Functions with the imaginary unit i appear as two lines – the real and the imaginary part</li>
         </ul>
       </div>
       <div class="shot">
@@ -136,13 +140,14 @@
   <section id="kurven">
     <div class="feature">
       <div class="feature-text">
-        <div class="eyebrow">Calculus</div>
+        <div class="eyebrow">Calculus · Pro</div>
         <h2>Examining curves – integrals included</h2>
         <p>Drop two points on a curve with the point tool and tap ∫: DiamMath shades the region and shows it as a properly typeset equation with the limits filled in. Put the points on two different curves and it computes the area enclosed between them instead.</p>
         <ul>
           <li>The area is always positive – it is computed as A = ∫|f| dx using an adaptive Simpson method that keeps checking its own accuracy</li>
           <li>Roots, local extrema, intersections, genuine points of tangency and inflection points via the symbolic second derivative</li>
           <li>First, second and third derivatives as blocks of their own in their own colour, marked ′ ″ ‴ in the legend</li>
+          <li>Definite integrals with a worked solution following school rules where one applies – otherwise as a clearly marked approximation</li>
           <li>If the numerical cross-check fails, the app says so openly – instead of inventing a number</li>
         </ul>
       </div>
@@ -175,7 +180,7 @@
   <section id="raum">
     <div class="feature">
       <div class="feature-text">
-        <div class="eyebrow">3D graph</div>
+        <div class="eyebrow">3D graph · Pro</div>
         <h2>In three dimensions</h2>
         <p>The 3D area renders height surfaces z = f(x,y) as well as implicit surfaces F(x,y,z) = 0 – from saddles and tori to a gyroid and a heart. Fifteen ready-made shapes sit in a toolbar and compute with a single tap.</p>
         <ul>
@@ -198,7 +203,8 @@
         <h2>Type it the way you write it</h2>
         <p>On iPhone and iPad a purpose-built maths keyboard replaces the system one in every formula field: x, y, z, the parameters a and b, π, e, i, brackets, roots, powers and a division key that becomes a real fraction bar once typeset. A second page holds the functions, from sin to conj.</p>
         <ul>
-          <li>Whatever you type appears live in beautiful mathematical typesetting</li>
+          <li>School notation without multiplication signs: “2x”, “ax”, “2πr” and “x(x+1)” are read correctly</li>
+          <li>Whatever you type appears live in beautiful mathematical typesetting – and DiamMath adds the closing bracket itself when you confirm</li>
           <li>Integrals with limits, matrices in proper brackets, sigma and product signs with their index</li>
           <li>A scientific calculator with memory keys, logarithms, factorials, degrees and radians, a history and “ans”</li>
           <li>On the Mac, the hardware keyboard remains the way you type</li>
@@ -211,10 +217,34 @@
     </div>
   </section>
 
+  <section id="scanner">
+    <div class="feature">
+      <div class="feature-text">
+        <div class="eyebrow">Function scanner</div>
+        <h2>From your exercise book to the graph</h2>
+        <p>Photograph a handwritten or printed function, or pick a photo from your library: DiamMath reads the expression and passes it to the 2D graph or to calculus.</p>
+        <ul>
+          <li>Exponents are recognised, and a notation such as “x² + 3 = y” is brought into the form y = …</li>
+          <li>Where a character is uncertain, the app offers another reading you can tap</li>
+          <li>Recognition runs entirely on the device; the image is neither stored nor transmitted</li>
+        </ul>
+      </div>
+      <div class="feature-text" id="formeln">
+        <div class="eyebrow">Formula collection</div>
+        <h2>119 formulas, 97 with a derivation</h2>
+        <p>Algebra, geometry, calculus, statistics and physics – right up to electricity and magnetism, oscillations and waves, thermodynamics and heating engineering. Every formula is properly typeset and put in context, 97 of them with a derivation.</p>
+        <ul>
+          <li>The same presentation on iPhone, iPad and Mac</li>
+          <li>Part of the free Basic version, just like the function scanner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="blaetter">
     <div class="kicker">Working</div>
-    <h2>Worksheets instead of throwaway sums</h2>
-    <p class="lead">DiamMath has a file format of its own. What you work out stays with you – and can be passed on.</p>
+    <h2>Workbooks instead of throwaway sums</h2>
+    <p class="lead">DiamMath has a file format of its own: workbooks with as many sheets as you like. What you work out stays with you – and can be passed on.</p>
     <div class="grid3">
       <div class="mini">
         <h3>Its own library</h3>
@@ -226,7 +256,7 @@
       </div>
       <div class="mini">
         <h3>Export</h3>
-        <p>The value table as CSV, the graph as PNG or as a genuine vector PDF – all produced locally, with no detour via a server.</p>
+        <p>With DiamMath Pro: the value table as CSV, the graph as PNG or as a genuine vector PDF with numbers on both axes – all produced locally, with no detour via a server.</p>
       </div>
       <div class="mini">
         <h3>Note blocks</h3>
@@ -238,27 +268,27 @@
       </div>
       <div class="mini">
         <h3>Backup</h3>
-        <p>Export and import as a file or via iCloud Drive. A backup never deletes existing files: worksheets are added under names that are still free.</p>
+        <p>With DiamMath Pro: export and import as a file or via iCloud Drive. A backup never deletes existing files: workbooks are added under names that are still free.</p>
       </div>
     </div>
   </section>
 
   <section id="werkstatt">
-    <div class="kicker">Workshops</div>
+    <div class="kicker">Workshops · Pro</div>
     <h2>Far beyond plotting</h2>
-    <p class="lead">Three workshops gather tools that would otherwise need apps of their own – and each of them writes its result back into the worksheet if you want it to.</p>
+    <p class="lead">Two workshops gather tools that would otherwise need apps of their own – and each writes its result back into the worksheet if you want it to.</p>
     <div class="grid3">
       <div class="mini">
-        <h3>Visualisation</h3>
+        <h3>Visualisation workshop</h3>
         <p>Polar curves, parametric curves, implicit curves and plane geometry with unambiguously classified intersections. Gaps in the domain are never quietly bridged.</p>
       </div>
       <div class="mini">
-        <h3>Linear algebra</h3>
-        <p>Vectors and matrices up to 10 × 10 with determinant, inverse, transpose and linear systems – plus the complex plane.</p>
+        <h3>Advanced workshop</h3>
+        <p>Linear algebra with vectors and matrices up to 10 × 10 – determinant, inverse, transpose and linear systems – and the complex plane.</p>
       </div>
       <div class="mini">
         <h3>Sequences, statistics, units</h3>
-        <p>Sequences and series, descriptive statistics with linear regression, and a unit converter covering 13 kinds of quantity.</p>
+        <p>Also in the advanced workshop: sequences and series, descriptive statistics with linear regression, and a unit converter covering 13 kinds of quantity.</p>
       </div>
     </div>
   </section>
@@ -273,8 +303,8 @@
         <p>Functions, the 2D graph, the calculator, calculus and the equation system can each carry an image from your photo library, with freely adjustable opacity. The 3D graph deliberately keeps its dark stage, because that darkness is what gives the surfaces their depth.</p>
       </div>
       <div class="mini">
-        <h3>Seven accent colours</h3>
-        <p>From the default deep blue through gold, forest green, bordeaux, teal and aubergine to graphite – the colour tints buttons, selections and the operators on the maths keyboard.</p>
+        <h3>Six accent colours</h3>
+        <p>The Diam gemstones – diamond, sapphire, ruby, emerald, gold and silver – tint buttons, selections and the operators on the maths keyboard.</p>
       </div>
       <div class="mini">
         <h3>24 app icons</h3>
@@ -314,23 +344,41 @@
       <div class="row"><dt>Orientation</dt><dd>On iPhone deliberately portrait only; iPad and Mac work in every orientation and window size.</dd></div>
       <div class="row"><dt>Connectivity</dt><dd>Not needed for worksheets, calculations or exports – everything runs on the device.</dd></div>
       <div class="row"><dt>Account</dt><dd>None. No tracking, no advertising, no DiamApps servers.</dd></div>
-      <div class="row"><dt>Version</dt><dd>0.7.21 (build 49), a development build. The polish for iPad and Mac is still to come.</dd></div>
+      <div class="row"><dt>Version</dt><dd>1.0.2, as of November 2026.</dd></div>
     </dl>
 
+  </section>
+
+  <section id="stufen">
+    <div class="kicker">Scope</div>
+    <h2>Basic and Pro</h2>
+    <p class="lead">Downloading and Basic are free. DiamMath Pro is a one-time purchase – no subscription, and no advertising in either edition. The purchase covers iPhone, iPad and Mac under the same Apple ID.</p>
+    <div class="grid3">
+      <div class="mini">
+        <h3>Basic – free for good</h3>
+        <p>Functions and the 2D graph, the maths keyboard, the calculator, systems of equations, the formula collection, the function scanner, iCloud sync and the full app design.</p>
+      </div>
+      <div class="mini">
+        <h3>Pro – €0.99 once</h3>
+        <p>The analysis tools in the 2D graph (special points, plotting the derivative, the area between curves, the value table and export), calculus with a built-in check, the 3D graph, both workshops and the backup.</p>
+      </div>
+      <div class="mini">
+        <h3>Try it free for 14 days</h3>
+        <p>The trial unlocks every Pro feature for 14 days. It costs €0, ends by itself and is never charged – once per Apple ID.</p>
+      </div>
+    </div>
   </section>
 
   <section id="ehrlich">
     <div class="honest">
       <h2>Honestly</h2>
-      <p>DiamMath is in development. These are the limits of the current version – and we would rather name them here than have you discover them later:</p>
+      <p>These are the limits of the current version – and we would rather name them here than have you discover them later:</p>
       <ul>
-        <li>Integrals are computed numerically, not symbolically – there is no antiderivative as a formula.</li>
+        <li>Definite integrals show a worked solution where a school rule applies; otherwise DiamMath computes numerically and marks the result as an approximation. There is no antiderivative for arbitrary expressions.</li>
         <li>Double roots that lie very close together can merge into one during curve sketching.</li>
         <li>Plane geometry works without a constraint graph: points are placed, not tied to one another.</li>
-        <li>The 3D workshop is explicitly a prototype to experiment with.</li>
-        <li>The app is not in the App Store yet. There is currently no public test access.</li>
+        <li>The function scanner reads single lines with exponents; fractions with a fraction bar, root signs over whole expressions and multi-line working are beyond it for now. Check the reading before you calculate.</li>
         <li>On iPhone the app deliberately runs in portrait only; iPad and Mac work in every orientation and window size.</li>
-        <li>The polish for iPad and Mac is still to come – the focus so far has been the iPhone.</li>
       </ul>
       <p>This is an English translation. In case of doubt, the German version of this page is authoritative.</p>
     </div>
